@@ -1,0 +1,628 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3B5D7F1E2978B8F700C67EB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F1D2978B8F700C67EB8 /* AppDelegate.swift */; };
+		3B5D7F202978B8F700C67EB8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F1F2978B8F700C67EB8 /* SceneDelegate.swift */; };
+		3B5D7F272978B8F800C67EB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B5D7F262978B8F800C67EB8 /* Assets.xcassets */; };
+		3B5D7F2A2978B8F800C67EB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B5D7F282978B8F800C67EB8 /* LaunchScreen.storyboard */; };
+		3B5D7F392978B99200C67EB8 /* FTTeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F372978B99200C67EB8 /* FTTeamsViewController.swift */; };
+		3B5D7F3A2978B99200C67EB8 /* FTTeamsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B5D7F382978B99200C67EB8 /* FTTeamsViewController.xib */; };
+		3B5D7F3D2978BAC900C67EB8 /* FTConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F3C2978BAC900C67EB8 /* FTConfiguration.swift */; };
+		3B5D7F412978BC4C00C67EB8 /* FTHttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F402978BC4C00C67EB8 /* FTHttpMethod.swift */; };
+		3B5D7F432978BC7200C67EB8 /* FTServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F422978BC7200C67EB8 /* FTServiceError.swift */; };
+		3B5D7F452978BCE300C67EB8 /* FTResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F442978BCE200C67EB8 /* FTResponse.swift */; };
+		3B5D7F472978BD0F00C67EB8 /* FTServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F462978BD0F00C67EB8 /* FTServiceProtocol.swift */; };
+		3B5D7F492978BD6C00C67EB8 /* FTServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F482978BD6C00C67EB8 /* FTServiceManager.swift */; };
+		3B5D7F4D2978C09500C67EB8 /* FTTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F4C2978C09500C67EB8 /* FTTeam.swift */; };
+		3B5D7F512978C18D00C67EB8 /* FTTeamGetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F502978C18D00C67EB8 /* FTTeamGetService.swift */; };
+		3B5D7F532978C5E100C67EB8 /* UIViewController-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F522978C5E100C67EB8 /* UIViewController-extension.swift */; };
+		3B5D7F572978D02500C67EB8 /* FTTeamCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F552978D02500C67EB8 /* FTTeamCollectionViewCell.swift */; };
+		3B5D7F582978D02500C67EB8 /* FTTeamCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B5D7F562978D02500C67EB8 /* FTTeamCollectionViewCell.xib */; };
+		3B5D7F5A2978D07300C67EB8 /* FTTeamsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F592978D07300C67EB8 /* FTTeamsViewModel.swift */; };
+		3B5D7F5C2978D30A00C67EB8 /* UICollectionView-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F5B2978D30A00C67EB8 /* UICollectionView-extension.swift */; };
+		3B5D7F5E2978D49F00C67EB8 /* UIView-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F5D2978D49F00C67EB8 /* UIView-extension.swift */; };
+		3B5D7F602979753A00C67EB8 /* FTCompetition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F5F2979753A00C67EB8 /* FTCompetition.swift */; };
+		3B5D7F622979766100C67EB8 /* FTCompetitionTeamsGetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F612979766100C67EB8 /* FTCompetitionTeamsGetService.swift */; };
+		3B5D7F6629797DBB00C67EB8 /* FTTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F6429797DBB00C67EB8 /* FTTeamViewController.swift */; };
+		3B5D7F6729797DBB00C67EB8 /* FTTeamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B5D7F6529797DBB00C67EB8 /* FTTeamViewController.xib */; };
+		3B5D7F6929797FFF00C67EB8 /* FTTeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F6829797FFF00C67EB8 /* FTTeamViewModel.swift */; };
+		3B5D7F6C2979865700C67EB8 /* UITableView-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F6B2979865700C67EB8 /* UITableView-extension.swift */; };
+		3B5D7F722979877000C67EB8 /* FTIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F712979877000C67EB8 /* FTIdentifierProtocol.swift */; };
+		3B5D7F7529798A8300C67EB8 /* FTCoachTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F7329798A8300C67EB8 /* FTCoachTableViewCell.swift */; };
+		3B5D7F7629798A8300C67EB8 /* FTCoachTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B5D7F7429798A8300C67EB8 /* FTCoachTableViewCell.xib */; };
+		3B5D7F7929798A8F00C67EB8 /* FTCompetitionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F7729798A8F00C67EB8 /* FTCompetitionsTableViewCell.swift */; };
+		3B5D7F7A29798A8F00C67EB8 /* FTCompetitionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B5D7F7829798A8F00C67EB8 /* FTCompetitionsTableViewCell.xib */; };
+		3B5D7F7D29798A9C00C67EB8 /* FTPlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F7B29798A9C00C67EB8 /* FTPlayerTableViewCell.swift */; };
+		3B5D7F7E29798A9C00C67EB8 /* FTPlayerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B5D7F7C29798A9C00C67EB8 /* FTPlayerTableViewCell.xib */; };
+		3B5D7F8129798E7900C67EB8 /* FTTeamSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F7F29798E7900C67EB8 /* FTTeamSectionHeaderView.swift */; };
+		3B5D7F8229798E7900C67EB8 /* FTTeamSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B5D7F8029798E7900C67EB8 /* FTTeamSectionHeaderView.xib */; };
+		3B5D7F872979957800C67EB8 /* FTCompetitionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F852979957700C67EB8 /* FTCompetitionCollectionViewCell.swift */; };
+		3B5D7F882979957800C67EB8 /* FTCompetitionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B5D7F862979957800C67EB8 /* FTCompetitionCollectionViewCell.xib */; };
+		3B5D7F8A2979972300C67EB8 /* FTCompetitionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F892979972300C67EB8 /* FTCompetitionsViewModel.swift */; };
+		3B5D7F8C29799EFA00C67EB8 /* UIImageView-extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F8B29799EFA00C67EB8 /* UIImageView-extensions.swift */; };
+		3B5D7F8F2979D7E500C67EB8 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B5D7F8E2979D7E500C67EB8 /* Colors.xcassets */; };
+		3B5D7F912979D89900C67EB8 /* FTColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F902979D89900C67EB8 /* FTColor.swift */; };
+		3B5D7F932979D97D00C67EB8 /* UIColor-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F922979D97D00C67EB8 /* UIColor-extension.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3B5D7F1A2978B8F600C67EB8 /* FootballTeams.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootballTeams.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B5D7F1D2978B8F700C67EB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3B5D7F1F2978B8F700C67EB8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3B5D7F262978B8F800C67EB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3B5D7F292978B8F800C67EB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3B5D7F2B2978B8F800C67EB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B5D7F372978B99200C67EB8 /* FTTeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTTeamsViewController.swift; sourceTree = "<group>"; };
+		3B5D7F382978B99200C67EB8 /* FTTeamsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FTTeamsViewController.xib; sourceTree = "<group>"; };
+		3B5D7F3C2978BAC900C67EB8 /* FTConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTConfiguration.swift; sourceTree = "<group>"; };
+		3B5D7F402978BC4C00C67EB8 /* FTHttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTHttpMethod.swift; sourceTree = "<group>"; };
+		3B5D7F422978BC7200C67EB8 /* FTServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTServiceError.swift; sourceTree = "<group>"; };
+		3B5D7F442978BCE200C67EB8 /* FTResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTResponse.swift; sourceTree = "<group>"; };
+		3B5D7F462978BD0F00C67EB8 /* FTServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTServiceProtocol.swift; sourceTree = "<group>"; };
+		3B5D7F482978BD6C00C67EB8 /* FTServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTServiceManager.swift; sourceTree = "<group>"; };
+		3B5D7F4C2978C09500C67EB8 /* FTTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTTeam.swift; sourceTree = "<group>"; };
+		3B5D7F502978C18D00C67EB8 /* FTTeamGetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTTeamGetService.swift; sourceTree = "<group>"; };
+		3B5D7F522978C5E100C67EB8 /* UIViewController-extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController-extension.swift"; sourceTree = "<group>"; };
+		3B5D7F552978D02500C67EB8 /* FTTeamCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTTeamCollectionViewCell.swift; sourceTree = "<group>"; };
+		3B5D7F562978D02500C67EB8 /* FTTeamCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FTTeamCollectionViewCell.xib; sourceTree = "<group>"; };
+		3B5D7F592978D07300C67EB8 /* FTTeamsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTTeamsViewModel.swift; sourceTree = "<group>"; };
+		3B5D7F5B2978D30A00C67EB8 /* UICollectionView-extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView-extension.swift"; sourceTree = "<group>"; };
+		3B5D7F5D2978D49F00C67EB8 /* UIView-extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView-extension.swift"; sourceTree = "<group>"; };
+		3B5D7F5F2979753A00C67EB8 /* FTCompetition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTCompetition.swift; sourceTree = "<group>"; };
+		3B5D7F612979766100C67EB8 /* FTCompetitionTeamsGetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTCompetitionTeamsGetService.swift; sourceTree = "<group>"; };
+		3B5D7F6429797DBB00C67EB8 /* FTTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTTeamViewController.swift; sourceTree = "<group>"; };
+		3B5D7F6529797DBB00C67EB8 /* FTTeamViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FTTeamViewController.xib; sourceTree = "<group>"; };
+		3B5D7F6829797FFF00C67EB8 /* FTTeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTTeamViewModel.swift; sourceTree = "<group>"; };
+		3B5D7F6B2979865700C67EB8 /* UITableView-extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView-extension.swift"; sourceTree = "<group>"; };
+		3B5D7F712979877000C67EB8 /* FTIdentifierProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTIdentifierProtocol.swift; sourceTree = "<group>"; };
+		3B5D7F7329798A8300C67EB8 /* FTCoachTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTCoachTableViewCell.swift; sourceTree = "<group>"; };
+		3B5D7F7429798A8300C67EB8 /* FTCoachTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FTCoachTableViewCell.xib; sourceTree = "<group>"; };
+		3B5D7F7729798A8F00C67EB8 /* FTCompetitionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTCompetitionsTableViewCell.swift; sourceTree = "<group>"; };
+		3B5D7F7829798A8F00C67EB8 /* FTCompetitionsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FTCompetitionsTableViewCell.xib; sourceTree = "<group>"; };
+		3B5D7F7B29798A9C00C67EB8 /* FTPlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTPlayerTableViewCell.swift; sourceTree = "<group>"; };
+		3B5D7F7C29798A9C00C67EB8 /* FTPlayerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FTPlayerTableViewCell.xib; sourceTree = "<group>"; };
+		3B5D7F7F29798E7900C67EB8 /* FTTeamSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTTeamSectionHeaderView.swift; sourceTree = "<group>"; };
+		3B5D7F8029798E7900C67EB8 /* FTTeamSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FTTeamSectionHeaderView.xib; sourceTree = "<group>"; };
+		3B5D7F852979957700C67EB8 /* FTCompetitionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTCompetitionCollectionViewCell.swift; sourceTree = "<group>"; };
+		3B5D7F862979957800C67EB8 /* FTCompetitionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FTCompetitionCollectionViewCell.xib; sourceTree = "<group>"; };
+		3B5D7F892979972300C67EB8 /* FTCompetitionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTCompetitionsViewModel.swift; sourceTree = "<group>"; };
+		3B5D7F8B29799EFA00C67EB8 /* UIImageView-extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView-extensions.swift"; sourceTree = "<group>"; };
+		3B5D7F8E2979D7E500C67EB8 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		3B5D7F902979D89900C67EB8 /* FTColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTColor.swift; sourceTree = "<group>"; };
+		3B5D7F922979D97D00C67EB8 /* UIColor-extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-extension.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3B5D7F172978B8F600C67EB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3B5D7F112978B8F600C67EB8 = {
+			isa = PBXGroup;
+			children = (
+				3B5D7F1C2978B8F600C67EB8 /* FootballTeams */,
+				3B5D7F1B2978B8F600C67EB8 /* Products */,
+				C258E0B2783974F4D71746DC /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		3B5D7F1B2978B8F600C67EB8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B5D7F1A2978B8F600C67EB8 /* FootballTeams.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3B5D7F1C2978B8F600C67EB8 /* FootballTeams */ = {
+			isa = PBXGroup;
+			children = (
+				3B5D7F332978B94A00C67EB8 /* Networking */,
+				3B5D7F3B2978BAB500C67EB8 /* Constansts */,
+				3B5D7F342978B95100C67EB8 /* Utils */,
+				3B5D7F322978B94000C67EB8 /* Model */,
+				3B5D7F312978B93700C67EB8 /* Screen */,
+				3B5D7F1D2978B8F700C67EB8 /* AppDelegate.swift */,
+				3B5D7F1F2978B8F700C67EB8 /* SceneDelegate.swift */,
+				3B5D7F8D2979D6DF00C67EB8 /* Resources */,
+				3B5D7F282978B8F800C67EB8 /* LaunchScreen.storyboard */,
+				3B5D7F2B2978B8F800C67EB8 /* Info.plist */,
+			);
+			path = FootballTeams;
+			sourceTree = "<group>";
+		};
+		3B5D7F312978B93700C67EB8 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				3B5D7F6329797D4A00C67EB8 /* Team */,
+				3B5D7F362978B97500C67EB8 /* Teams */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		3B5D7F322978B94000C67EB8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3B5D7F4C2978C09500C67EB8 /* FTTeam.swift */,
+				3B5D7F5F2979753A00C67EB8 /* FTCompetition.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3B5D7F332978B94A00C67EB8 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				3B5D7F3F2978BBF600C67EB8 /* Core */,
+				3B5D7F3E2978BBEE00C67EB8 /* Services */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		3B5D7F342978B95100C67EB8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3B5D7F352978B95A00C67EB8 /* Extension */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		3B5D7F352978B95A00C67EB8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3B5D7F522978C5E100C67EB8 /* UIViewController-extension.swift */,
+				3B5D7F5D2978D49F00C67EB8 /* UIView-extension.swift */,
+				3B5D7F5B2978D30A00C67EB8 /* UICollectionView-extension.swift */,
+				3B5D7F6B2979865700C67EB8 /* UITableView-extension.swift */,
+				3B5D7F8B29799EFA00C67EB8 /* UIImageView-extensions.swift */,
+				3B5D7F712979877000C67EB8 /* FTIdentifierProtocol.swift */,
+				3B5D7F922979D97D00C67EB8 /* UIColor-extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		3B5D7F362978B97500C67EB8 /* Teams */ = {
+			isa = PBXGroup;
+			children = (
+				3B5D7F542978D00900C67EB8 /* View */,
+				3B5D7F372978B99200C67EB8 /* FTTeamsViewController.swift */,
+				3B5D7F382978B99200C67EB8 /* FTTeamsViewController.xib */,
+				3B5D7F592978D07300C67EB8 /* FTTeamsViewModel.swift */,
+			);
+			path = Teams;
+			sourceTree = "<group>";
+		};
+		3B5D7F3B2978BAB500C67EB8 /* Constansts */ = {
+			isa = PBXGroup;
+			children = (
+				3B5D7F3C2978BAC900C67EB8 /* FTConfiguration.swift */,
+				3B5D7F902979D89900C67EB8 /* FTColor.swift */,
+			);
+			path = Constansts;
+			sourceTree = "<group>";
+		};
+		3B5D7F3E2978BBEE00C67EB8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3B5D7F502978C18D00C67EB8 /* FTTeamGetService.swift */,
+				3B5D7F612979766100C67EB8 /* FTCompetitionTeamsGetService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		3B5D7F3F2978BBF600C67EB8 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				3B5D7F402978BC4C00C67EB8 /* FTHttpMethod.swift */,
+				3B5D7F422978BC7200C67EB8 /* FTServiceError.swift */,
+				3B5D7F442978BCE200C67EB8 /* FTResponse.swift */,
+				3B5D7F462978BD0F00C67EB8 /* FTServiceProtocol.swift */,
+				3B5D7F482978BD6C00C67EB8 /* FTServiceManager.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		3B5D7F542978D00900C67EB8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3B5D7F552978D02500C67EB8 /* FTTeamCollectionViewCell.swift */,
+				3B5D7F562978D02500C67EB8 /* FTTeamCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3B5D7F6329797D4A00C67EB8 /* Team */ = {
+			isa = PBXGroup;
+			children = (
+				3B5D7F6A2979862100C67EB8 /* Views */,
+				3B5D7F6429797DBB00C67EB8 /* FTTeamViewController.swift */,
+				3B5D7F6529797DBB00C67EB8 /* FTTeamViewController.xib */,
+				3B5D7F6829797FFF00C67EB8 /* FTTeamViewModel.swift */,
+			);
+			path = Team;
+			sourceTree = "<group>";
+		};
+		3B5D7F6A2979862100C67EB8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3B5D7F832979953B00C67EB8 /* Competitions */,
+				3B5D7F7F29798E7900C67EB8 /* FTTeamSectionHeaderView.swift */,
+				3B5D7F8029798E7900C67EB8 /* FTTeamSectionHeaderView.xib */,
+				3B5D7F7329798A8300C67EB8 /* FTCoachTableViewCell.swift */,
+				3B5D7F7429798A8300C67EB8 /* FTCoachTableViewCell.xib */,
+				3B5D7F7B29798A9C00C67EB8 /* FTPlayerTableViewCell.swift */,
+				3B5D7F7C29798A9C00C67EB8 /* FTPlayerTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3B5D7F832979953B00C67EB8 /* Competitions */ = {
+			isa = PBXGroup;
+			children = (
+				3B5D7F842979954800C67EB8 /* Competition */,
+				3B5D7F7729798A8F00C67EB8 /* FTCompetitionsTableViewCell.swift */,
+				3B5D7F7829798A8F00C67EB8 /* FTCompetitionsTableViewCell.xib */,
+				3B5D7F892979972300C67EB8 /* FTCompetitionsViewModel.swift */,
+			);
+			path = Competitions;
+			sourceTree = "<group>";
+		};
+		3B5D7F842979954800C67EB8 /* Competition */ = {
+			isa = PBXGroup;
+			children = (
+				3B5D7F852979957700C67EB8 /* FTCompetitionCollectionViewCell.swift */,
+				3B5D7F862979957800C67EB8 /* FTCompetitionCollectionViewCell.xib */,
+			);
+			path = Competition;
+			sourceTree = "<group>";
+		};
+		3B5D7F8D2979D6DF00C67EB8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3B5D7F262978B8F800C67EB8 /* Assets.xcassets */,
+				3B5D7F8E2979D7E500C67EB8 /* Colors.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C258E0B2783974F4D71746DC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3B5D7F192978B8F600C67EB8 /* FootballTeams */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B5D7F2E2978B8F800C67EB8 /* Build configuration list for PBXNativeTarget "FootballTeams" */;
+			buildPhases = (
+				3B5D7F162978B8F600C67EB8 /* Sources */,
+				3B5D7F172978B8F600C67EB8 /* Frameworks */,
+				3B5D7F182978B8F600C67EB8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FootballTeams;
+			productName = FootballTeams;
+			productReference = 3B5D7F1A2978B8F600C67EB8 /* FootballTeams.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3B5D7F122978B8F600C67EB8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				CLASSPREFIX = FT;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					3B5D7F192978B8F600C67EB8 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 3B5D7F152978B8F600C67EB8 /* Build configuration list for PBXProject "FootballTeams" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3B5D7F112978B8F600C67EB8;
+			productRefGroup = 3B5D7F1B2978B8F600C67EB8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3B5D7F192978B8F600C67EB8 /* FootballTeams */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3B5D7F182978B8F600C67EB8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B5D7F2A2978B8F800C67EB8 /* LaunchScreen.storyboard in Resources */,
+				3B5D7F272978B8F800C67EB8 /* Assets.xcassets in Resources */,
+				3B5D7F8F2979D7E500C67EB8 /* Colors.xcassets in Resources */,
+				3B5D7F582978D02500C67EB8 /* FTTeamCollectionViewCell.xib in Resources */,
+				3B5D7F3A2978B99200C67EB8 /* FTTeamsViewController.xib in Resources */,
+				3B5D7F882979957800C67EB8 /* FTCompetitionCollectionViewCell.xib in Resources */,
+				3B5D7F7E29798A9C00C67EB8 /* FTPlayerTableViewCell.xib in Resources */,
+				3B5D7F7A29798A8F00C67EB8 /* FTCompetitionsTableViewCell.xib in Resources */,
+				3B5D7F7629798A8300C67EB8 /* FTCoachTableViewCell.xib in Resources */,
+				3B5D7F8229798E7900C67EB8 /* FTTeamSectionHeaderView.xib in Resources */,
+				3B5D7F6729797DBB00C67EB8 /* FTTeamViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3B5D7F162978B8F600C67EB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B5D7F8A2979972300C67EB8 /* FTCompetitionsViewModel.swift in Sources */,
+				3B5D7F572978D02500C67EB8 /* FTTeamCollectionViewCell.swift in Sources */,
+				3B5D7F5A2978D07300C67EB8 /* FTTeamsViewModel.swift in Sources */,
+				3B5D7F912979D89900C67EB8 /* FTColor.swift in Sources */,
+				3B5D7F872979957800C67EB8 /* FTCompetitionCollectionViewCell.swift in Sources */,
+				3B5D7F622979766100C67EB8 /* FTCompetitionTeamsGetService.swift in Sources */,
+				3B5D7F6629797DBB00C67EB8 /* FTTeamViewController.swift in Sources */,
+				3B5D7F7D29798A9C00C67EB8 /* FTPlayerTableViewCell.swift in Sources */,
+				3B5D7F492978BD6C00C67EB8 /* FTServiceManager.swift in Sources */,
+				3B5D7F512978C18D00C67EB8 /* FTTeamGetService.swift in Sources */,
+				3B5D7F1E2978B8F700C67EB8 /* AppDelegate.swift in Sources */,
+				3B5D7F8C29799EFA00C67EB8 /* UIImageView-extensions.swift in Sources */,
+				3B5D7F7929798A8F00C67EB8 /* FTCompetitionsTableViewCell.swift in Sources */,
+				3B5D7F5C2978D30A00C67EB8 /* UICollectionView-extension.swift in Sources */,
+				3B5D7F932979D97D00C67EB8 /* UIColor-extension.swift in Sources */,
+				3B5D7F412978BC4C00C67EB8 /* FTHttpMethod.swift in Sources */,
+				3B5D7F602979753A00C67EB8 /* FTCompetition.swift in Sources */,
+				3B5D7F532978C5E100C67EB8 /* UIViewController-extension.swift in Sources */,
+				3B5D7F6C2979865700C67EB8 /* UITableView-extension.swift in Sources */,
+				3B5D7F5E2978D49F00C67EB8 /* UIView-extension.swift in Sources */,
+				3B5D7F3D2978BAC900C67EB8 /* FTConfiguration.swift in Sources */,
+				3B5D7F4D2978C09500C67EB8 /* FTTeam.swift in Sources */,
+				3B5D7F472978BD0F00C67EB8 /* FTServiceProtocol.swift in Sources */,
+				3B5D7F452978BCE300C67EB8 /* FTResponse.swift in Sources */,
+				3B5D7F392978B99200C67EB8 /* FTTeamsViewController.swift in Sources */,
+				3B5D7F8129798E7900C67EB8 /* FTTeamSectionHeaderView.swift in Sources */,
+				3B5D7F6929797FFF00C67EB8 /* FTTeamViewModel.swift in Sources */,
+				3B5D7F7529798A8300C67EB8 /* FTCoachTableViewCell.swift in Sources */,
+				3B5D7F722979877000C67EB8 /* FTIdentifierProtocol.swift in Sources */,
+				3B5D7F432978BC7200C67EB8 /* FTServiceError.swift in Sources */,
+				3B5D7F202978B8F700C67EB8 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3B5D7F282978B8F800C67EB8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B5D7F292978B8F800C67EB8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3B5D7F2C2978B8F800C67EB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3B5D7F2D2978B8F800C67EB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3B5D7F2F2978B8F800C67EB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FootballTeams/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Football Teams";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.FootballTeams;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3B5D7F302978B8F800C67EB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FootballTeams/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Football Teams";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.FootballTeams;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3B5D7F152978B8F600C67EB8 /* Build configuration list for PBXProject "FootballTeams" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B5D7F2C2978B8F800C67EB8 /* Debug */,
+				3B5D7F2D2978B8F800C67EB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B5D7F2E2978B8F800C67EB8 /* Build configuration list for PBXNativeTarget "FootballTeams" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B5D7F2F2978B8F800C67EB8 /* Debug */,
+				3B5D7F302978B8F800C67EB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3B5D7F122978B8F600C67EB8 /* Project object */;
+}

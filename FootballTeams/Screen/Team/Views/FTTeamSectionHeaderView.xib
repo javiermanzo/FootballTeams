@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FTTeamSectionHeaderView" customModule="FootballTeams" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="52"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57K-Op-kfR">
+                    <rect key="frame" x="16" y="12" width="382" height="32"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                    <color key="textColor" name="text"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="57K-Op-kfR" secondAttribute="trailing" constant="16" id="9uE-rv-pmT"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="57K-Op-kfR" secondAttribute="bottom" constant="8" id="AeM-gq-kHO"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="57K-Op-kfR" secondAttribute="bottom" constant="8" id="B6i-cq-i8W"/>
+                <constraint firstItem="57K-Op-kfR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="JOQ-NA-NWm"/>
+                <constraint firstItem="57K-Op-kfR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="Rm1-YT-bLU"/>
+                <constraint firstAttribute="trailing" secondItem="57K-Op-kfR" secondAttribute="trailing" constant="16" id="tYd-Ob-HbW"/>
+                <constraint firstItem="57K-Op-kfR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="ywS-wI-7ji"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="titleLabel" destination="57K-Op-kfR" id="WRJ-0u-jwq"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="110"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="text">
+            <color red="0.10196078431372549" green="0.070588235294117646" blue="0.043137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
