@@ -1,20 +1,32 @@
 //
-//  JMTeamsViewController.swift
+//  FTTestViewController.swift
 //  FootballTeams
 //
-//  Created by Javier Manzo on 18/01/2023.
+//  Created by Javier Manzo on 03/02/2023.
 //
 
 import UIKit
 
-class FTTeamsViewController: UIViewController {
+class FTTeamsViewControllerCode: UIViewController {
     
-    @IBOutlet private weak var collectionView: UICollectionView!
+    private let collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.backgroundColor = .clear
+        return collectionView
+    }()
     
-    private let viewModel = FTTeamsViewModel()
-    private let spinner = UIActivityIndicatorView(style: .large)
+    private let spinner: UIActivityIndicatorView = {
+        let activityIndicator = UIActivityIndicatorView(style: .large)
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        return activityIndicator
+    }()
     
     private let refreshControl = UIRefreshControl()
+    
+    private let viewModel = FTTeamsViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,35 +35,56 @@ class FTTeamsViewController: UIViewController {
     }
     
     private func setUpViews() {
+        self.view.backgroundColor = UIColor(color: .first)
         self.setUpNavigation()
         self.setUpSpinner()
         self.setUpCollectionView()
     }
     
+    private func setUpCollectionView() {
+        
+        self.collectionView.refreshControl = self.refreshControl
+        self.refreshControl.addTarget(self, action: #selector(requestData), for: .valueChanged)
+        
+        self.collectionView.registerCellClass(FTTeamCollectionViewCellCode.self)
+        self.collectionView.delegate = self
+        self.collectionView.dataSource = self
+        view.addSubview(self.collectionView)
+        
+        NSLayoutConstraint.activate([
+            self.collectionView.topAnchor.constraint(equalTo: view.topAnchor),
+            self.collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            self.collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            self.collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+    }
+    
     private func setUpNavigation() {
         self.title = "UEFA Champions League"
+        
+        if #available(iOS 15, *) {
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = UIColor(color: .first) ?? .clear
+            self.navigationController?.navigationBar.standardAppearance = appearance
+            self.navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        } else {
+            self.navigationController?.navigationBar.barTintColor =  UIColor(color: .first) ?? .clear
+        }
+        
         self.navigationController?.navigationBar.tintColor = UIColor(color: .navigationTint) ?? .black
         let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor(color: .text) ?? .black]
         self.navigationController?.navigationBar.titleTextAttributes = textAttributes
-        self.navigationController?.navigationBar.barTintColor =  UIColor(color: .first) ?? .clear
         
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
-    private func setUpCollectionView() {
-        self.collectionView.refreshControl = self.refreshControl
-        self.refreshControl.addTarget(self, action: #selector(requestData), for: .valueChanged)
-        
-        self.collectionView.registerCell(FTTeamCollectionViewCell.self)
-        
-        self.collectionView.delegate = self
-        self.collectionView.dataSource = self
-        self.collectionView.reloadData()
-    }
-    
     private func setUpSpinner() {
-        self.view.addSubview(spinner)
-        self.spinner.center = self.view.center
+        self.view.addSubview(self.spinner)
+        NSLayoutConstraint.activate([
+            self.spinner.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            self.spinner.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
+        ])
     }
     
     @objc private func requestData() {
@@ -78,7 +111,7 @@ class FTTeamsViewController: UIViewController {
     }
 }
 
-extension FTTeamsViewController: UICollectionViewDataSource {
+extension FTTeamsViewControllerCode: UICollectionViewDataSource, UICollectionViewDelegate {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -88,8 +121,8 @@ extension FTTeamsViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(FTTeamCollectionViewCell.self, cellForItemAt: indexPath),
-              let teams = self.viewModel.competition?.teams else {
+        guard   let cell = collectionView.dequeueReusableCell(FTTeamCollectionViewCellCode.self, cellForItemAt: indexPath),
+                let teams = self.viewModel.competition?.teams else {
             return UICollectionViewCell()
         }
         let team = teams[indexPath.row]
@@ -101,9 +134,10 @@ extension FTTeamsViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let teams = self.viewModel.competition?.teams {
             let team = teams[indexPath.row]
-            let vc = FTTeamViewController(team: team)
+            let vc = FTTeamViewControllerCode(teamId: team.id)
             
             let cell = collectionView.cellForItem(at: indexPath)
+            
             cell?.pulse(completion: { _ in
                 self.navigationController?.pushViewController(vc, animated: true)
             })
@@ -111,7 +145,7 @@ extension FTTeamsViewController: UICollectionViewDataSource {
     }
 }
 
-extension FTTeamsViewController: UICollectionViewDelegateFlowLayout {
+extension FTTeamsViewControllerCode: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 110, height: 110)
     }

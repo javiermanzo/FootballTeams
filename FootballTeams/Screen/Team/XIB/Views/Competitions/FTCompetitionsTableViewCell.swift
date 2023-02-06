@@ -27,7 +27,7 @@ class FTCompetitionsTableViewCell: UITableViewCell {
     }
     
     private func setUpCollectionView() {
-        self.collectionView.registerCell(FTCompetitionCollectionViewCell.self)
+        self.collectionView.registerCellNib(FTCompetitionCollectionViewCell.self)
         
         if let flowLayout = self.collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
             flowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize

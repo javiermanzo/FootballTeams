@@ -1,0 +1,20 @@
+PODS:
+  - Kingfisher (7.5.0)
+  - PocketSVG (2.7.2)
+
+DEPENDENCIES:
+  - Kingfisher (= 7.5.0)
+  - PocketSVG (= 2.7.2)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Kingfisher
+    - PocketSVG
+
+SPEC CHECKSUMS:
+  Kingfisher: b9c2a4a4af2990a768445c277359b27bde287d71
+  PocketSVG: c597e6916641fd2674d2f0cabca0d1869cb82880
+
+PODFILE CHECKSUM: cf54cb3f25a6f526d6990f40138fc9a76666f815
+
+COCOAPODS: 1.11.3

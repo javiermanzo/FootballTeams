@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A37E420030941DFF46301E4 /* Pods_FootballTeams.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 896BDD1DECD8FD60FD86CFFF /* Pods_FootballTeams.framework */; };
 		3B5D7F1E2978B8F700C67EB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F1D2978B8F700C67EB8 /* AppDelegate.swift */; };
 		3B5D7F202978B8F700C67EB8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F1F2978B8F700C67EB8 /* SceneDelegate.swift */; };
 		3B5D7F272978B8F800C67EB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B5D7F262978B8F800C67EB8 /* Assets.xcassets */; };
@@ -30,7 +31,6 @@
 		3B5D7F602979753A00C67EB8 /* FTCompetition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F5F2979753A00C67EB8 /* FTCompetition.swift */; };
 		3B5D7F622979766100C67EB8 /* FTCompetitionTeamsGetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F612979766100C67EB8 /* FTCompetitionTeamsGetService.swift */; };
 		3B5D7F6629797DBB00C67EB8 /* FTTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F6429797DBB00C67EB8 /* FTTeamViewController.swift */; };
-		3B5D7F6729797DBB00C67EB8 /* FTTeamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B5D7F6529797DBB00C67EB8 /* FTTeamViewController.xib */; };
 		3B5D7F6929797FFF00C67EB8 /* FTTeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F6829797FFF00C67EB8 /* FTTeamViewModel.swift */; };
 		3B5D7F6C2979865700C67EB8 /* UITableView-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F6B2979865700C67EB8 /* UITableView-extension.swift */; };
 		3B5D7F722979877000C67EB8 /* FTIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F712979877000C67EB8 /* FTIdentifierProtocol.swift */; };
@@ -49,9 +49,19 @@
 		3B5D7F8F2979D7E500C67EB8 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B5D7F8E2979D7E500C67EB8 /* Colors.xcassets */; };
 		3B5D7F912979D89900C67EB8 /* FTColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F902979D89900C67EB8 /* FTColor.swift */; };
 		3B5D7F932979D97D00C67EB8 /* UIColor-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F922979D97D00C67EB8 /* UIColor-extension.swift */; };
+		3B9A9C92298D48EB00046380 /* FTTeamsViewControllerCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9A9C91298D48EB00046380 /* FTTeamsViewControllerCode.swift */; };
+		3B9A9C94298D4A1400046380 /* FTTeamCollectionViewCellCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9A9C93298D4A1400046380 /* FTTeamCollectionViewCellCode.swift */; };
+		3BAF28BC298EC27C0051D19E /* FTTeamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BAF28BB298EC27B0051D19E /* FTTeamViewController.xib */; };
+		3BAF28BF298EC2A10051D19E /* FTTeamViewControllerCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF28BE298EC2A10051D19E /* FTTeamViewControllerCode.swift */; };
+		3BAF28C1298EC5AE0051D19E /* FTTeamSectionHeaderViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF28C0298EC5AE0051D19E /* FTTeamSectionHeaderViewCode.swift */; };
+		3BAF28C3298EDA880051D19E /* FTCoachTableViewCellCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF28C2298EDA880051D19E /* FTCoachTableViewCellCode.swift */; };
+		3BAF28C5298EDC820051D19E /* FTPlayerTableViewCellCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF28C4298EDC820051D19E /* FTPlayerTableViewCellCode.swift */; };
+		3BAF28C7298EDD210051D19E /* FTCompetitionsTableViewCellCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF28C6298EDD210051D19E /* FTCompetitionsTableViewCellCode.swift */; };
+		3BAF28C9298EDF590051D19E /* FTCompetitionCollectionViewCellCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF28C8298EDF590051D19E /* FTCompetitionCollectionViewCellCode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A098E183B63D5B6FC946FCB /* Pods-FootballTeams.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootballTeams.debug.xcconfig"; path = "Target Support Files/Pods-FootballTeams/Pods-FootballTeams.debug.xcconfig"; sourceTree = "<group>"; };
 		3B5D7F1A2978B8F600C67EB8 /* FootballTeams.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootballTeams.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B5D7F1D2978B8F700C67EB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B5D7F1F2978B8F700C67EB8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,7 +87,6 @@
 		3B5D7F5F2979753A00C67EB8 /* FTCompetition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTCompetition.swift; sourceTree = "<group>"; };
 		3B5D7F612979766100C67EB8 /* FTCompetitionTeamsGetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTCompetitionTeamsGetService.swift; sourceTree = "<group>"; };
 		3B5D7F6429797DBB00C67EB8 /* FTTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTTeamViewController.swift; sourceTree = "<group>"; };
-		3B5D7F6529797DBB00C67EB8 /* FTTeamViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FTTeamViewController.xib; sourceTree = "<group>"; };
 		3B5D7F6829797FFF00C67EB8 /* FTTeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTTeamViewModel.swift; sourceTree = "<group>"; };
 		3B5D7F6B2979865700C67EB8 /* UITableView-extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView-extension.swift"; sourceTree = "<group>"; };
 		3B5D7F712979877000C67EB8 /* FTIdentifierProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTIdentifierProtocol.swift; sourceTree = "<group>"; };
@@ -96,6 +105,17 @@
 		3B5D7F8E2979D7E500C67EB8 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		3B5D7F902979D89900C67EB8 /* FTColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTColor.swift; sourceTree = "<group>"; };
 		3B5D7F922979D97D00C67EB8 /* UIColor-extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-extension.swift"; sourceTree = "<group>"; };
+		3B9A9C91298D48EB00046380 /* FTTeamsViewControllerCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTTeamsViewControllerCode.swift; sourceTree = "<group>"; };
+		3B9A9C93298D4A1400046380 /* FTTeamCollectionViewCellCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTTeamCollectionViewCellCode.swift; sourceTree = "<group>"; };
+		3BAF28BB298EC27B0051D19E /* FTTeamViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FTTeamViewController.xib; sourceTree = "<group>"; };
+		3BAF28BE298EC2A10051D19E /* FTTeamViewControllerCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTTeamViewControllerCode.swift; sourceTree = "<group>"; };
+		3BAF28C0298EC5AE0051D19E /* FTTeamSectionHeaderViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTTeamSectionHeaderViewCode.swift; sourceTree = "<group>"; };
+		3BAF28C2298EDA880051D19E /* FTCoachTableViewCellCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTCoachTableViewCellCode.swift; sourceTree = "<group>"; };
+		3BAF28C4298EDC820051D19E /* FTPlayerTableViewCellCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTPlayerTableViewCellCode.swift; sourceTree = "<group>"; };
+		3BAF28C6298EDD210051D19E /* FTCompetitionsTableViewCellCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTCompetitionsTableViewCellCode.swift; sourceTree = "<group>"; };
+		3BAF28C8298EDF590051D19E /* FTCompetitionCollectionViewCellCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTCompetitionCollectionViewCellCode.swift; sourceTree = "<group>"; };
+		6444868D80503D7A391603FC /* Pods-FootballTeams.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootballTeams.release.xcconfig"; path = "Target Support Files/Pods-FootballTeams/Pods-FootballTeams.release.xcconfig"; sourceTree = "<group>"; };
+		896BDD1DECD8FD60FD86CFFF /* Pods_FootballTeams.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FootballTeams.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A37E420030941DFF46301E4 /* Pods_FootballTeams.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +136,7 @@
 				3B5D7F1C2978B8F600C67EB8 /* FootballTeams */,
 				3B5D7F1B2978B8F600C67EB8 /* Products */,
 				C258E0B2783974F4D71746DC /* Pods */,
+				7E864E9738FFD7D3D29CDEC8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -195,10 +217,9 @@
 		3B5D7F362978B97500C67EB8 /* Teams */ = {
 			isa = PBXGroup;
 			children = (
-				3B5D7F542978D00900C67EB8 /* View */,
-				3B5D7F372978B99200C67EB8 /* FTTeamsViewController.swift */,
-				3B5D7F382978B99200C67EB8 /* FTTeamsViewController.xib */,
 				3B5D7F592978D07300C67EB8 /* FTTeamsViewModel.swift */,
+				3B9A9C98298EC13800046380 /* Coded */,
+				3B9A9C97298EC12B00046380 /* XIB */,
 			);
 			path = Teams;
 			sourceTree = "<group>";
@@ -245,10 +266,10 @@
 		3B5D7F6329797D4A00C67EB8 /* Team */ = {
 			isa = PBXGroup;
 			children = (
-				3B5D7F6A2979862100C67EB8 /* Views */,
-				3B5D7F6429797DBB00C67EB8 /* FTTeamViewController.swift */,
-				3B5D7F6529797DBB00C67EB8 /* FTTeamViewController.xib */,
+				3BAF28BD298EC2870051D19E /* Code */,
+				3B9A9C99298EC20700046380 /* XIB */,
 				3B5D7F6829797FFF00C67EB8 /* FTTeamViewModel.swift */,
+				3B5D7F892979972300C67EB8 /* FTCompetitionsViewModel.swift */,
 			);
 			path = Team;
 			sourceTree = "<group>";
@@ -273,7 +294,6 @@
 				3B5D7F842979954800C67EB8 /* Competition */,
 				3B5D7F7729798A8F00C67EB8 /* FTCompetitionsTableViewCell.swift */,
 				3B5D7F7829798A8F00C67EB8 /* FTCompetitionsTableViewCell.xib */,
-				3B5D7F892979972300C67EB8 /* FTCompetitionsViewModel.swift */,
 			);
 			path = Competitions;
 			sourceTree = "<group>";
@@ -296,9 +316,61 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		3B9A9C97298EC12B00046380 /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				3B5D7F542978D00900C67EB8 /* View */,
+				3B5D7F372978B99200C67EB8 /* FTTeamsViewController.swift */,
+				3B5D7F382978B99200C67EB8 /* FTTeamsViewController.xib */,
+			);
+			path = XIB;
+			sourceTree = "<group>";
+		};
+		3B9A9C98298EC13800046380 /* Coded */ = {
+			isa = PBXGroup;
+			children = (
+				3B9A9C91298D48EB00046380 /* FTTeamsViewControllerCode.swift */,
+				3B9A9C93298D4A1400046380 /* FTTeamCollectionViewCellCode.swift */,
+			);
+			path = Coded;
+			sourceTree = "<group>";
+		};
+		3B9A9C99298EC20700046380 /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				3B5D7F6A2979862100C67EB8 /* Views */,
+				3B5D7F6429797DBB00C67EB8 /* FTTeamViewController.swift */,
+				3BAF28BB298EC27B0051D19E /* FTTeamViewController.xib */,
+			);
+			path = XIB;
+			sourceTree = "<group>";
+		};
+		3BAF28BD298EC2870051D19E /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				3BAF28BE298EC2A10051D19E /* FTTeamViewControllerCode.swift */,
+				3BAF28C0298EC5AE0051D19E /* FTTeamSectionHeaderViewCode.swift */,
+				3BAF28C2298EDA880051D19E /* FTCoachTableViewCellCode.swift */,
+				3BAF28C4298EDC820051D19E /* FTPlayerTableViewCellCode.swift */,
+				3BAF28C6298EDD210051D19E /* FTCompetitionsTableViewCellCode.swift */,
+				3BAF28C8298EDF590051D19E /* FTCompetitionCollectionViewCellCode.swift */,
+			);
+			path = Code;
+			sourceTree = "<group>";
+		};
+		7E864E9738FFD7D3D29CDEC8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				896BDD1DECD8FD60FD86CFFF /* Pods_FootballTeams.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C258E0B2783974F4D71746DC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				3A098E183B63D5B6FC946FCB /* Pods-FootballTeams.debug.xcconfig */,
+				6444868D80503D7A391603FC /* Pods-FootballTeams.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -310,9 +382,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3B5D7F2E2978B8F800C67EB8 /* Build configuration list for PBXNativeTarget "FootballTeams" */;
 			buildPhases = (
+				B6DF23536CFAE78879C3698F /* [CP] Check Pods Manifest.lock */,
 				3B5D7F162978B8F600C67EB8 /* Sources */,
 				3B5D7F172978B8F600C67EB8 /* Frameworks */,
 				3B5D7F182978B8F600C67EB8 /* Resources */,
+				BDF3C6CEFF01A8231843487B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -367,16 +441,58 @@
 				3B5D7F8F2979D7E500C67EB8 /* Colors.xcassets in Resources */,
 				3B5D7F582978D02500C67EB8 /* FTTeamCollectionViewCell.xib in Resources */,
 				3B5D7F3A2978B99200C67EB8 /* FTTeamsViewController.xib in Resources */,
+				3BAF28BC298EC27C0051D19E /* FTTeamViewController.xib in Resources */,
 				3B5D7F882979957800C67EB8 /* FTCompetitionCollectionViewCell.xib in Resources */,
 				3B5D7F7E29798A9C00C67EB8 /* FTPlayerTableViewCell.xib in Resources */,
 				3B5D7F7A29798A8F00C67EB8 /* FTCompetitionsTableViewCell.xib in Resources */,
 				3B5D7F7629798A8300C67EB8 /* FTCoachTableViewCell.xib in Resources */,
 				3B5D7F8229798E7900C67EB8 /* FTTeamSectionHeaderView.xib in Resources */,
-				3B5D7F6729797DBB00C67EB8 /* FTTeamViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B6DF23536CFAE78879C3698F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FootballTeams-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BDF3C6CEFF01A8231843487B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FootballTeams/Pods-FootballTeams-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FootballTeams/Pods-FootballTeams-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FootballTeams/Pods-FootballTeams-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3B5D7F162978B8F600C67EB8 /* Sources */ = {
@@ -385,35 +501,43 @@
 			files = (
 				3B5D7F8A2979972300C67EB8 /* FTCompetitionsViewModel.swift in Sources */,
 				3B5D7F572978D02500C67EB8 /* FTTeamCollectionViewCell.swift in Sources */,
+				3B9A9C94298D4A1400046380 /* FTTeamCollectionViewCellCode.swift in Sources */,
 				3B5D7F5A2978D07300C67EB8 /* FTTeamsViewModel.swift in Sources */,
 				3B5D7F912979D89900C67EB8 /* FTColor.swift in Sources */,
 				3B5D7F872979957800C67EB8 /* FTCompetitionCollectionViewCell.swift in Sources */,
 				3B5D7F622979766100C67EB8 /* FTCompetitionTeamsGetService.swift in Sources */,
 				3B5D7F6629797DBB00C67EB8 /* FTTeamViewController.swift in Sources */,
 				3B5D7F7D29798A9C00C67EB8 /* FTPlayerTableViewCell.swift in Sources */,
+				3BAF28C1298EC5AE0051D19E /* FTTeamSectionHeaderViewCode.swift in Sources */,
+				3BAF28C7298EDD210051D19E /* FTCompetitionsTableViewCellCode.swift in Sources */,
 				3B5D7F492978BD6C00C67EB8 /* FTServiceManager.swift in Sources */,
 				3B5D7F512978C18D00C67EB8 /* FTTeamGetService.swift in Sources */,
 				3B5D7F1E2978B8F700C67EB8 /* AppDelegate.swift in Sources */,
 				3B5D7F8C29799EFA00C67EB8 /* UIImageView-extensions.swift in Sources */,
 				3B5D7F7929798A8F00C67EB8 /* FTCompetitionsTableViewCell.swift in Sources */,
 				3B5D7F5C2978D30A00C67EB8 /* UICollectionView-extension.swift in Sources */,
+				3B9A9C92298D48EB00046380 /* FTTeamsViewControllerCode.swift in Sources */,
 				3B5D7F932979D97D00C67EB8 /* UIColor-extension.swift in Sources */,
 				3B5D7F412978BC4C00C67EB8 /* FTHttpMethod.swift in Sources */,
+				3BAF28C3298EDA880051D19E /* FTCoachTableViewCellCode.swift in Sources */,
 				3B5D7F602979753A00C67EB8 /* FTCompetition.swift in Sources */,
 				3B5D7F532978C5E100C67EB8 /* UIViewController-extension.swift in Sources */,
 				3B5D7F6C2979865700C67EB8 /* UITableView-extension.swift in Sources */,
 				3B5D7F5E2978D49F00C67EB8 /* UIView-extension.swift in Sources */,
 				3B5D7F3D2978BAC900C67EB8 /* FTConfiguration.swift in Sources */,
+				3BAF28C9298EDF590051D19E /* FTCompetitionCollectionViewCellCode.swift in Sources */,
 				3B5D7F4D2978C09500C67EB8 /* FTTeam.swift in Sources */,
 				3B5D7F472978BD0F00C67EB8 /* FTServiceProtocol.swift in Sources */,
 				3B5D7F452978BCE300C67EB8 /* FTResponse.swift in Sources */,
 				3B5D7F392978B99200C67EB8 /* FTTeamsViewController.swift in Sources */,
 				3B5D7F8129798E7900C67EB8 /* FTTeamSectionHeaderView.swift in Sources */,
+				3BAF28BF298EC2A10051D19E /* FTTeamViewControllerCode.swift in Sources */,
 				3B5D7F6929797FFF00C67EB8 /* FTTeamViewModel.swift in Sources */,
 				3B5D7F7529798A8300C67EB8 /* FTCoachTableViewCell.swift in Sources */,
 				3B5D7F722979877000C67EB8 /* FTIdentifierProtocol.swift in Sources */,
 				3B5D7F432978BC7200C67EB8 /* FTServiceError.swift in Sources */,
 				3B5D7F202978B8F700C67EB8 /* SceneDelegate.swift in Sources */,
+				3BAF28C5298EDC820051D19E /* FTPlayerTableViewCellCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,6 +671,7 @@
 		};
 		3B5D7F2F2978B8F800C67EB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A098E183B63D5B6FC946FCB /* Pods-FootballTeams.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -575,6 +700,7 @@
 		};
 		3B5D7F302978B8F800C67EB8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6444868D80503D7A391603FC /* Pods-FootballTeams.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

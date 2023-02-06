@@ -18,6 +18,8 @@ class FTTeamCollectionViewCell: UICollectionViewCell {
         self.containerView.roundCorners()
     }
     
+    
+    
     func setUpValue(team: FTTeam) {
         if let crest = team.crest,
            let url = URL(string: crest) {

@@ -9,8 +9,12 @@ import UIKit
 
 extension UICollectionView {
     
-    func registerCell<T: UICollectionViewCell>(_: T.Type) {
+    func registerCellNib<T: UICollectionViewCell>(_: T.Type) {
         self.register(T.nib, forCellWithReuseIdentifier: T.className)
+    }
+    
+    func registerCellClass<T: UICollectionViewCell>(_: T.Type) {
+        self.register(T.self, forCellWithReuseIdentifier: T.className)
     }
     
     func dequeueReusableCell<T: UICollectionViewCell>(_: T.Type, cellForItemAt indexPath: IndexPath) -> T? {
@@ -18,3 +22,5 @@ extension UICollectionView {
         return cell
     }
 }
+
+

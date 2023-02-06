@@ -26,7 +26,7 @@ class FTTeamGetService: FTServiceProtocolWithResult {
     
     init(teamId: Int) {
         self.pathParams = [
-            "{TEAM_ID}" : "\(teamId)"
+            "TEAM_ID" : "\(teamId)"
         ]
         
         self.headers = FTServiceManager.getDefaultHeaders()

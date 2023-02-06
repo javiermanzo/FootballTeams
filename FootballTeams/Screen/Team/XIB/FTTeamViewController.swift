@@ -11,10 +11,18 @@ class FTTeamViewController: UIViewController {
     
     @IBOutlet private weak var tableView: UITableView!
     
+    private let spinner: UIActivityIndicatorView = {
+        let activityIndicator = UIActivityIndicatorView(style: .large)
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        return activityIndicator
+    }()
+    
+    private let refreshControl = UIRefreshControl()
+    
     private let viewModel: FTTeamViewModel
     
-    init(team: FTTeam) {
-        self.viewModel = FTTeamViewModel(team: team)
+    init(teamId: Int) {
+        self.viewModel = FTTeamViewModel(teamId: teamId)
         let className = String(describing: type(of: self))
         super.init(nibName: className, bundle: Bundle.main)
     }
@@ -26,17 +34,12 @@ class FTTeamViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpViews()
-        
-        self.viewModel.setUpSections()
+        self.requestData()
     }
     
     private func setUpViews() {
-        self.setUpNavigation()
         self.setUpTableView()
-    }
-    
-    private func setUpNavigation() {
-        self.title = self.viewModel.team.name
+        self.setUpSpinner()
     }
     
     private func setUpTableView() {
@@ -50,6 +53,42 @@ class FTTeamViewController: UIViewController {
         self.tableView.register(FTTeamSectionHeaderView.nib, forHeaderFooterViewReuseIdentifier: FTTeamSectionHeaderView.className)
         
         self.tableView.clearExtraSeparators()
+        
+        self.tableView.refreshControl = self.refreshControl
+        self.refreshControl.addTarget(self, action: #selector(requestData), for: .valueChanged)
+    }
+    
+    private func setUpSpinner() {
+        self.view.addSubview(self.spinner)
+        NSLayoutConstraint.activate([
+            self.spinner.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            self.spinner.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
+        ])
+    }
+    
+    @objc private func requestData() {
+        self.spinner.startAnimating()
+        self.viewModel.request { response in
+            DispatchQueue.main.async { [weak self] in
+                self?.spinner.stopAnimating()
+                self?.refreshControl.endRefreshing()
+            }
+            
+            switch response {
+            case .success:
+                DispatchQueue.main.async { [weak self] in
+                    self?.title = self?.viewModel.team?.name ?? ""
+                    self?.viewModel.setUpSections()
+                    self?.tableView.reloadData()
+                }
+            case .error(let error):
+                if let error = error {
+                    self.presentServiceError(error: error) { [weak self] in
+                        self?.requestData()
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -67,7 +106,7 @@ extension FTTeamViewController: UITableViewDelegate, UITableViewDataSource {
         case .coach:
             return 1
         case .squad:
-            return self.viewModel.team.squad.count
+            return self.viewModel.team?.squad.count ?? 0
         }
     }
     
@@ -80,22 +119,23 @@ extension FTTeamViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let team = self.viewModel.team else { return UITableViewCell() }
         let section = self.viewModel.tableSecionts[indexPath.section]
         
         switch section {
         case .competitions:
             guard let cell = tableView.dequeueReusableCell(FTCompetitionsTableViewCell.self) else { break }
-            let competitions = self.viewModel.team.runningCompetitions
+            let competitions = team.runningCompetitions
             cell.setUpValue(competitions: competitions)
             return cell
         case .coach:
             guard let cell = tableView.dequeueReusableCell(FTCoachTableViewCell.self) else { break }
-            let coach = self.viewModel.team.coach
+            let coach = team.coach
             cell.setUpValue(coach: coach)
             return cell
         case .squad:
             guard let cell = tableView.dequeueReusableCell(FTPlayerTableViewCell.self) else { break }
-            let player = self.viewModel.team.squad[indexPath.row]
+            let player = team.squad[indexPath.row]
             cell.setUpValue(player: player)
             return cell
         }

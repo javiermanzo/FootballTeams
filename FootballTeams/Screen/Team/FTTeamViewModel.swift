@@ -8,26 +8,40 @@
 import Foundation
 
 class FTTeamViewModel {
-    let team: FTTeam
+    var team: FTTeam?
+    let teamId: Int
     var tableSecionts = [FTTeamSeaction]()
     
-    init(team: FTTeam) {
-        self.team = team
+    init(teamId: Int) {
+        self.teamId = teamId
     }
     
     func setUpSections() {
+        guard let team = self.team else { return }
         self.tableSecionts = [FTTeamSeaction]()
         
-        if !self.team.runningCompetitions.isEmpty {
+        if !team.runningCompetitions.isEmpty {
             self.tableSecionts.append(.competitions)
         }
         
-        if let _ = self.team.coach.name {
+        if let _ = team.coach.name {
             self.tableSecionts.append(.coach)
         }
         
-        if !self.team.squad.isEmpty {
+        if !team.squad.isEmpty {
             self.tableSecionts.append(.squad)
+        }
+    }
+    
+    func request(completion: @escaping (FTResponse) -> Void) {
+        FTTeamGetService(teamId: self.teamId).request { response in
+            switch response {
+            case .success(let team):
+                self.team = team
+                completion(.success)
+            case .error(let error):
+                completion(.error(error))
+            }
         }
     }
 }
