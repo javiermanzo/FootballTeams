@@ -1,5 +1,5 @@
 //
-//  FTCompetitionsTableViewCellCode.swift
+//  FTCompetitionsTableViewCell.swift
 //  FootballTeams
 //
 //  Created by Javier Manzo on 04/02/2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FTCompetitionsTableViewCellCode: UITableViewCell {
+class FTCompetitionsTableViewCell: UITableViewCell {
 
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -48,7 +48,7 @@ class FTCompetitionsTableViewCellCode: UITableViewCell {
             self.collectionView.heightAnchor.constraint(equalToConstant: 90)
         ])
         
-        self.collectionView.registerCellClass(FTCompetitionCollectionViewCellCode.self)
+        self.collectionView.registerCellClass(FTCompetitionCollectionViewCell.self)
         
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
@@ -60,7 +60,7 @@ class FTCompetitionsTableViewCellCode: UITableViewCell {
     }
 }
 
-extension FTCompetitionsTableViewCellCode: UICollectionViewDataSource {
+extension FTCompetitionsTableViewCell: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -70,7 +70,7 @@ extension FTCompetitionsTableViewCellCode: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(FTCompetitionCollectionViewCellCode.self, cellForItemAt: indexPath) else {
+        guard let cell = collectionView.dequeueReusableCell(FTCompetitionCollectionViewCell.self, cellForItemAt: indexPath) else {
             return UICollectionViewCell()
         }
         let competition = self.viewModel.competitions[indexPath.row]
@@ -80,7 +80,7 @@ extension FTCompetitionsTableViewCellCode: UICollectionViewDataSource {
     }
 }
 
-extension FTCompetitionsTableViewCellCode: UICollectionViewDelegateFlowLayout {
+extension FTCompetitionsTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 90, height: 90)
     }

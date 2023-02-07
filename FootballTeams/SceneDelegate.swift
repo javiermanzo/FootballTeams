@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let window = UIWindow(windowScene: windowScene)
             FTDataProviderManager.set(type: .service)
             let dataProvider = FTDataProviderManager.get()
-            let vc = FTTeamsViewControllerCode(dataProvider: dataProvider)
+            let vc = FTTeamsViewController(dataProvider: dataProvider)
             let navigationController = UINavigationController(rootViewController: vc)
             window.rootViewController = navigationController
             self.window = window

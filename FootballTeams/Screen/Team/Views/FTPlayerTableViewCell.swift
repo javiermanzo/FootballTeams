@@ -1,5 +1,5 @@
 //
-//  FTCoachTableViewCellCode.swift
+//  FTPlayerTableViewCell.swift
 //  FootballTeams
 //
 //  Created by Javier Manzo on 04/02/2023.
@@ -7,8 +7,8 @@
 
 import UIKit
 
-class FTCoachTableViewCellCode: UITableViewCell {
-    
+class FTPlayerTableViewCell: UITableViewCell {
+
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -33,7 +33,7 @@ class FTCoachTableViewCellCode: UITableViewCell {
     private func setUpView() {
         self.backgroundColor = .clear
         self.contentView.addSubview(self.titleLabel)
-        self.titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        
         NSLayoutConstraint.activate([
             self.titleLabel.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 8),
             self.titleLabel.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -8),
@@ -42,15 +42,15 @@ class FTCoachTableViewCellCode: UITableViewCell {
         ])
     }
     
-    func setUpValue(coach: FTTeamCoach) {
-        var text = ""
+    func setUpValue(player: FTTeamPlayer) {
+        var text = player.name
         
-        if let name = coach.name {
-            text = name
-            
-            if let nationality = coach.nationality {
-                text = "\(text) (\(nationality))"
-            }
+        if let nationality = player.nationality {
+            text = "\(text) (\(nationality))"
+        }
+        
+        if let position = player.position {
+            text = "\(text) - \(position)"
         }
         
         self.titleLabel.text = text

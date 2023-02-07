@@ -1,5 +1,5 @@
 //
-//  FTTestViewController.swift
+//  FTTeamsViewController.swift
 //  FootballTeams
 //
 //  Created by Javier Manzo on 03/02/2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FTTeamsViewControllerCode: UIViewController {
+class FTTeamsViewController: UIViewController {
     
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -55,7 +55,7 @@ class FTTeamsViewControllerCode: UIViewController {
         self.collectionView.refreshControl = self.refreshControl
         self.refreshControl.addTarget(self, action: #selector(requestData), for: .valueChanged)
         
-        self.collectionView.registerCellClass(FTTeamCollectionViewCellCode.self)
+        self.collectionView.registerCellClass(FTTeamCollectionViewCell.self)
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         view.addSubview(self.collectionView)
@@ -120,7 +120,7 @@ class FTTeamsViewControllerCode: UIViewController {
     }
 }
 
-extension FTTeamsViewControllerCode: UICollectionViewDataSource, UICollectionViewDelegate {
+extension FTTeamsViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -130,7 +130,7 @@ extension FTTeamsViewControllerCode: UICollectionViewDataSource, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard   let cell = collectionView.dequeueReusableCell(FTTeamCollectionViewCellCode.self, cellForItemAt: indexPath),
+        guard   let cell = collectionView.dequeueReusableCell(FTTeamCollectionViewCell.self, cellForItemAt: indexPath),
                 let teams = self.viewModel.competition?.teams else {
             return UICollectionViewCell()
         }
@@ -143,7 +143,7 @@ extension FTTeamsViewControllerCode: UICollectionViewDataSource, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let teams = self.viewModel.competition?.teams {
             let team = teams[indexPath.row]
-            let vc = FTTeamViewControllerCode(teamId: team.id, dataProvider: self.viewModel.dataProvider)
+            let vc = FTTeamViewController(teamId: team.id, dataProvider: self.viewModel.dataProvider)
             
             let cell = collectionView.cellForItem(at: indexPath)
             
@@ -154,7 +154,7 @@ extension FTTeamsViewControllerCode: UICollectionViewDataSource, UICollectionVie
     }
 }
 
-extension FTTeamsViewControllerCode: UICollectionViewDelegateFlowLayout {
+extension FTTeamsViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 110, height: 110)
     }

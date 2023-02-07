@@ -1,5 +1,5 @@
 //
-//  FTTeamSectionHeaderViewCode.swift
+//  FTTeamSectionHeaderView.swift
 //  FootballTeams
 //
 //  Created by Javier Manzo on 04/02/2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FTTeamSectionHeaderViewCode: UITableViewHeaderFooterView {
+class FTTeamSectionHeaderView: UITableViewHeaderFooterView {
     
     private let titleLabel: UILabel = {
         let label = UILabel()

@@ -1,5 +1,5 @@
 //
-//  FTCompetitionCollectionViewCellCode.swift
+//  FTCompetitionCollectionViewCell.swift
 //  FootballTeams
 //
 //  Created by Javier Manzo on 04/02/2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FTCompetitionCollectionViewCellCode: UICollectionViewCell {
+class FTCompetitionCollectionViewCell: UICollectionViewCell {
     
     private let containerView: UIView = {
         let view = UIView()
@@ -90,6 +90,8 @@ class FTCompetitionCollectionViewCellCode: UICollectionViewCell {
                 DispatchQueue.main.async {
                     if let image = image {
                         self?.competitionImageView.image = image
+                    } else {
+                        print("")
                     }
                 }
             }

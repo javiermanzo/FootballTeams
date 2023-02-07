@@ -2,14 +2,21 @@
 //  FTTeamViewController.swift
 //  FootballTeams
 //
-//  Created by Javier Manzo on 19/01/2023.
+//  Created by Javier Manzo on 04/02/2023.
 //
 
 import UIKit
 
 class FTTeamViewController: UIViewController {
     
-    @IBOutlet private weak var tableView: UITableView!
+    private let tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.backgroundColor = .clear
+        tableView.separatorStyle = .none
+        tableView.allowsSelection = false
+        return tableView
+    }()
     
     private let spinner: UIActivityIndicatorView = {
         let activityIndicator = UIActivityIndicatorView(style: .large)
@@ -23,8 +30,7 @@ class FTTeamViewController: UIViewController {
     
     init(teamId: Int, dataProvider: FTDataProviderProtocol) {
         self.viewModel = FTTeamViewModel(teamId: teamId, dataProvider: dataProvider)
-        let className = String(describing: type(of: self))
-        super.init(nibName: className, bundle: Bundle.main)
+        super.init(nibName: nil, bundle: Bundle.main)
     }
     
     required init?(coder: NSCoder) {
@@ -38,6 +44,8 @@ class FTTeamViewController: UIViewController {
     }
     
     private func setUpViews() {
+        self.view.backgroundColor = UIColor(color: .first)
+        
         self.setUpTableView()
         self.setUpSpinner()
     }
@@ -46,16 +54,25 @@ class FTTeamViewController: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
-        self.tableView.registerCellNib(FTCoachTableViewCell.self)
-        self.tableView.registerCellNib(FTCompetitionsTableViewCell.self)
-        self.tableView.registerCellNib(FTPlayerTableViewCell.self)
+        self.tableView.registerCellClass(FTCoachTableViewCell.self)
+        self.tableView.registerCellClass(FTCompetitionsTableViewCell.self)
+        self.tableView.registerCellClass(FTPlayerTableViewCell.self)
         
-        self.tableView.register(FTTeamSectionHeaderView.nib, forHeaderFooterViewReuseIdentifier: FTTeamSectionHeaderView.className)
+        self.tableView.register(FTTeamSectionHeaderView.self, forHeaderFooterViewReuseIdentifier: FTTeamSectionHeaderView.className)
         
         self.tableView.clearExtraSeparators()
         
         self.tableView.refreshControl = self.refreshControl
         self.refreshControl.addTarget(self, action: #selector(requestData), for: .valueChanged)
+        
+        view.addSubview(self.tableView)
+        
+        NSLayoutConstraint.activate([
+            self.tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            self.tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            self.tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            self.tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
     }
     
     private func setUpSpinner() {
@@ -111,11 +128,11 @@ extension FTTeamViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: FTTeamSectionHeaderView.className) as? FTTeamSectionHeaderView else { return nil}
+        guard let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: FTTeamSectionHeaderView.className) as? FTTeamSectionHeaderView else { return nil}
         
         let section = self.viewModel.tableSecionts[section]
-        view.setValue(tile: section.title())
-        return view
+        headerView.setValue(tile: section.title())
+        return headerView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -143,4 +160,5 @@ extension FTTeamViewController: UITableViewDelegate, UITableViewDataSource {
         return UITableViewCell()
     }
 }
+
 

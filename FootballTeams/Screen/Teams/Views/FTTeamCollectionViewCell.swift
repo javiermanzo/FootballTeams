@@ -1,5 +1,5 @@
 //
-//  FTTestCollectionViewCell.swift
+//  FTTeamCollectionViewCell.swift
 //  FootballTeams
 //
 //  Created by Javier Manzo on 03/02/2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FTTeamCollectionViewCellCode: UICollectionViewCell {
+class FTTeamCollectionViewCell: UICollectionViewCell {
     
     private let containerView: UIView = {
         let view = UIView()

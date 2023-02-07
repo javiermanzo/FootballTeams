@@ -30,6 +30,9 @@ extension UIImageView {
         var options: KingfisherOptionsInfo = []
         
         if url.pathExtension == "svg" {
+            if self.bounds.size == .zero {
+                self.layoutIfNeeded()
+            }
             let processor = SVGProcessor(size: self.bounds.size)
             options.append(.processor(processor))
         }
