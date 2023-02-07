@@ -26,7 +26,6 @@ final class FTServiceManager {
         } else {
             self.requestHandler(model: model, service: service, completion: completion)
         }
-        self.requestHandler(model: model, service: service, completion: completion)
     }
     
     private static func requestHandler<T: Codable, P: FTServiceProtocolWithResult>(model: T.Type, service: P, completion: @escaping (FTResponseWithResult<T>)->()) {

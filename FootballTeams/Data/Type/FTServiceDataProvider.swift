@@ -7,7 +7,7 @@
 
 import Foundation
 
-class FTServideDataProvider: FTDataProviderProtocol {
+class FTServiceDataProvider: FTDataProviderProtocol {
     func requestCompetition(competitionCode: String, completion: @escaping (FTResponseWithResult<FTCompetition>) -> ()) {
         FTCompetitionTeamsGetService(competitionCode: competitionCode).request(completion: completion)
     }

@@ -62,7 +62,19 @@
 		3BAF28CF299144550051D19E /* FTServiceDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF28CE299144550051D19E /* FTServiceDataProvider.swift */; };
 		3BAF28D1299145960051D19E /* FTMockDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF28D0299145960051D19E /* FTMockDataProvider.swift */; };
 		3BAF28D329914D330051D19E /* FTDataProviderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF28D229914D330051D19E /* FTDataProviderManager.swift */; };
+		3BDCB90B2991F1A3007B856A /* FTTeamsUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDCB90A2991F1A3007B856A /* FTTeamsUnitTests.swift */; };
+		3BDCB9122991F8DA007B856A /* FTTeamUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDCB9112991F8DA007B856A /* FTTeamUnitTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3BDCB90C2991F1A3007B856A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B5D7F122978B8F600C67EB8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B5D7F192978B8F600C67EB8;
+			remoteInfo = FootballTeams;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3A098E183B63D5B6FC946FCB /* Pods-FootballTeams.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootballTeams.debug.xcconfig"; path = "Target Support Files/Pods-FootballTeams/Pods-FootballTeams.debug.xcconfig"; sourceTree = "<group>"; };
@@ -122,6 +134,9 @@
 		3BAF28CE299144550051D19E /* FTServiceDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTServiceDataProvider.swift; sourceTree = "<group>"; };
 		3BAF28D0299145960051D19E /* FTMockDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTMockDataProvider.swift; sourceTree = "<group>"; };
 		3BAF28D229914D330051D19E /* FTDataProviderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTDataProviderManager.swift; sourceTree = "<group>"; };
+		3BDCB9082991F1A3007B856A /* FootballTeamsUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FootballTeamsUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BDCB90A2991F1A3007B856A /* FTTeamsUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTTeamsUnitTests.swift; sourceTree = "<group>"; };
+		3BDCB9112991F8DA007B856A /* FTTeamUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTTeamUnitTests.swift; sourceTree = "<group>"; };
 		6444868D80503D7A391603FC /* Pods-FootballTeams.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootballTeams.release.xcconfig"; path = "Target Support Files/Pods-FootballTeams/Pods-FootballTeams.release.xcconfig"; sourceTree = "<group>"; };
 		896BDD1DECD8FD60FD86CFFF /* Pods_FootballTeams.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FootballTeams.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -135,6 +150,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3BDCB9052991F1A3007B856A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -142,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				3B5D7F1C2978B8F600C67EB8 /* FootballTeams */,
+				3BDCB9092991F1A3007B856A /* FootballTeamsUnitTests */,
 				3B5D7F1B2978B8F600C67EB8 /* Products */,
 				C258E0B2783974F4D71746DC /* Pods */,
 				7E864E9738FFD7D3D29CDEC8 /* Frameworks */,
@@ -152,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				3B5D7F1A2978B8F600C67EB8 /* FootballTeams.app */,
+				3BDCB9082991F1A3007B856A /* FootballTeamsUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -386,6 +410,15 @@
 			path = Type;
 			sourceTree = "<group>";
 		};
+		3BDCB9092991F1A3007B856A /* FootballTeamsUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				3BDCB90A2991F1A3007B856A /* FTTeamsUnitTests.swift */,
+				3BDCB9112991F8DA007B856A /* FTTeamUnitTests.swift */,
+			);
+			path = FootballTeamsUnitTests;
+			sourceTree = "<group>";
+		};
 		7E864E9738FFD7D3D29CDEC8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -425,6 +458,24 @@
 			productReference = 3B5D7F1A2978B8F600C67EB8 /* FootballTeams.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3BDCB9072991F1A3007B856A /* FootballTeamsUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BDCB9102991F1A3007B856A /* Build configuration list for PBXNativeTarget "FootballTeamsUnitTests" */;
+			buildPhases = (
+				3BDCB9042991F1A3007B856A /* Sources */,
+				3BDCB9052991F1A3007B856A /* Frameworks */,
+				3BDCB9062991F1A3007B856A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3BDCB90D2991F1A3007B856A /* PBXTargetDependency */,
+			);
+			name = FootballTeamsUnitTests;
+			productName = FootballTeamsUnitTests;
+			productReference = 3BDCB9082991F1A3007B856A /* FootballTeamsUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -438,6 +489,10 @@
 				TargetAttributes = {
 					3B5D7F192978B8F600C67EB8 = {
 						CreatedOnToolsVersion = 14.2;
+					};
+					3BDCB9072991F1A3007B856A = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 3B5D7F192978B8F600C67EB8;
 					};
 				};
 			};
@@ -455,6 +510,7 @@
 			projectRoot = "";
 			targets = (
 				3B5D7F192978B8F600C67EB8 /* FootballTeams */,
+				3BDCB9072991F1A3007B856A /* FootballTeamsUnitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -475,6 +531,13 @@
 				3B5D7F7A29798A8F00C67EB8 /* FTCompetitionsTableViewCell.xib in Resources */,
 				3B5D7F7629798A8300C67EB8 /* FTCoachTableViewCell.xib in Resources */,
 				3B5D7F8229798E7900C67EB8 /* FTTeamSectionHeaderView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BDCB9062991F1A3007B856A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,7 +636,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3BDCB9042991F1A3007B856A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BDCB9122991F8DA007B856A /* FTTeamUnitTests.swift in Sources */,
+				3BDCB90B2991F1A3007B856A /* FTTeamsUnitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3BDCB90D2991F1A3007B856A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B5D7F192978B8F600C67EB8 /* FootballTeams */;
+			targetProxy = 3BDCB90C2991F1A3007B856A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3B5D7F282978B8F800C67EB8 /* LaunchScreen.storyboard */ = {
@@ -759,6 +839,42 @@
 			};
 			name = Release;
 		};
+		3BDCB90E2991F1A3007B856A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.FootballTeamsUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FootballTeams.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FootballTeams";
+			};
+			name = Debug;
+		};
+		3BDCB90F2991F1A3007B856A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.FootballTeamsUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FootballTeams.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FootballTeams";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -776,6 +892,15 @@
 			buildConfigurations = (
 				3B5D7F2F2978B8F800C67EB8 /* Debug */,
 				3B5D7F302978B8F800C67EB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BDCB9102991F1A3007B856A /* Build configuration list for PBXNativeTarget "FootballTeamsUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BDCB90E2991F1A3007B856A /* Debug */,
+				3BDCB90F2991F1A3007B856A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

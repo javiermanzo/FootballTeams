@@ -17,7 +17,7 @@ final class FTDataProviderManager {
         case .mock:
             return FTMockDataProvider()
         case .service:
-            return FTServideDataProvider()
+            return FTServiceDataProvider()
         }
     }
     
