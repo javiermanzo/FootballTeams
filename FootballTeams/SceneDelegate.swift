@@ -14,7 +14,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            let vc = FTTeamsViewControllerCode()
+            FTDataProviderManager.set(type: .service)
+            let dataProvider = FTDataProviderManager.get()
+            let vc = FTTeamsViewControllerCode(dataProvider: dataProvider)
             let navigationController = UINavigationController(rootViewController: vc)
             window.rootViewController = navigationController
             self.window = window

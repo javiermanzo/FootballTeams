@@ -7,7 +7,9 @@
 
 import Foundation
 
-enum FTConfiguration: String {
-    case baseUrl = "https://api.football-data.org/v4"
-    case apikey = ""
+final class FTConfiguration {
+    private init() {}
+    
+    static let baseUrl = "https://api.football-data.org/v4"
+    static let apikey = "875d3783903447d2b74e59d724bd116c"
 }

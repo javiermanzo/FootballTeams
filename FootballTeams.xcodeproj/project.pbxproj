@@ -58,6 +58,10 @@
 		3BAF28C5298EDC820051D19E /* FTPlayerTableViewCellCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF28C4298EDC820051D19E /* FTPlayerTableViewCellCode.swift */; };
 		3BAF28C7298EDD210051D19E /* FTCompetitionsTableViewCellCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF28C6298EDD210051D19E /* FTCompetitionsTableViewCellCode.swift */; };
 		3BAF28C9298EDF590051D19E /* FTCompetitionCollectionViewCellCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF28C8298EDF590051D19E /* FTCompetitionCollectionViewCellCode.swift */; };
+		3BAF28CD299140540051D19E /* FTDataProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF28CC299140540051D19E /* FTDataProviderProtocol.swift */; };
+		3BAF28CF299144550051D19E /* FTServiceDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF28CE299144550051D19E /* FTServiceDataProvider.swift */; };
+		3BAF28D1299145960051D19E /* FTMockDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF28D0299145960051D19E /* FTMockDataProvider.swift */; };
+		3BAF28D329914D330051D19E /* FTDataProviderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF28D229914D330051D19E /* FTDataProviderManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,6 +118,10 @@
 		3BAF28C4298EDC820051D19E /* FTPlayerTableViewCellCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTPlayerTableViewCellCode.swift; sourceTree = "<group>"; };
 		3BAF28C6298EDD210051D19E /* FTCompetitionsTableViewCellCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTCompetitionsTableViewCellCode.swift; sourceTree = "<group>"; };
 		3BAF28C8298EDF590051D19E /* FTCompetitionCollectionViewCellCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTCompetitionCollectionViewCellCode.swift; sourceTree = "<group>"; };
+		3BAF28CC299140540051D19E /* FTDataProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTDataProviderProtocol.swift; sourceTree = "<group>"; };
+		3BAF28CE299144550051D19E /* FTServiceDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTServiceDataProvider.swift; sourceTree = "<group>"; };
+		3BAF28D0299145960051D19E /* FTMockDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTMockDataProvider.swift; sourceTree = "<group>"; };
+		3BAF28D229914D330051D19E /* FTDataProviderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTDataProviderManager.swift; sourceTree = "<group>"; };
 		6444868D80503D7A391603FC /* Pods-FootballTeams.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootballTeams.release.xcconfig"; path = "Target Support Files/Pods-FootballTeams/Pods-FootballTeams.release.xcconfig"; sourceTree = "<group>"; };
 		896BDD1DECD8FD60FD86CFFF /* Pods_FootballTeams.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FootballTeams.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -151,6 +159,7 @@
 		3B5D7F1C2978B8F600C67EB8 /* FootballTeams */ = {
 			isa = PBXGroup;
 			children = (
+				3BAF28CB299140360051D19E /* Data */,
 				3B5D7F332978B94A00C67EB8 /* Networking */,
 				3B5D7F3B2978BAB500C67EB8 /* Constansts */,
 				3B5D7F342978B95100C67EB8 /* Utils */,
@@ -358,6 +367,25 @@
 			path = Code;
 			sourceTree = "<group>";
 		};
+		3BAF28CB299140360051D19E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3BAF28D4299151650051D19E /* Type */,
+				3BAF28CC299140540051D19E /* FTDataProviderProtocol.swift */,
+				3BAF28D229914D330051D19E /* FTDataProviderManager.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		3BAF28D4299151650051D19E /* Type */ = {
+			isa = PBXGroup;
+			children = (
+				3BAF28CE299144550051D19E /* FTServiceDataProvider.swift */,
+				3BAF28D0299145960051D19E /* FTMockDataProvider.swift */,
+			);
+			path = Type;
+			sourceTree = "<group>";
+		};
 		7E864E9738FFD7D3D29CDEC8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -515,6 +543,7 @@
 				3B5D7F1E2978B8F700C67EB8 /* AppDelegate.swift in Sources */,
 				3B5D7F8C29799EFA00C67EB8 /* UIImageView-extensions.swift in Sources */,
 				3B5D7F7929798A8F00C67EB8 /* FTCompetitionsTableViewCell.swift in Sources */,
+				3BAF28D1299145960051D19E /* FTMockDataProvider.swift in Sources */,
 				3B5D7F5C2978D30A00C67EB8 /* UICollectionView-extension.swift in Sources */,
 				3B9A9C92298D48EB00046380 /* FTTeamsViewControllerCode.swift in Sources */,
 				3B5D7F932979D97D00C67EB8 /* UIColor-extension.swift in Sources */,
@@ -531,6 +560,9 @@
 				3B5D7F452978BCE300C67EB8 /* FTResponse.swift in Sources */,
 				3B5D7F392978B99200C67EB8 /* FTTeamsViewController.swift in Sources */,
 				3B5D7F8129798E7900C67EB8 /* FTTeamSectionHeaderView.swift in Sources */,
+				3BAF28CD299140540051D19E /* FTDataProviderProtocol.swift in Sources */,
+				3BAF28D329914D330051D19E /* FTDataProviderManager.swift in Sources */,
+				3BAF28CF299144550051D19E /* FTServiceDataProvider.swift in Sources */,
 				3BAF28BF298EC2A10051D19E /* FTTeamViewControllerCode.swift in Sources */,
 				3B5D7F6929797FFF00C67EB8 /* FTTeamViewModel.swift in Sources */,
 				3B5D7F7529798A8300C67EB8 /* FTCoachTableViewCell.swift in Sources */,

@@ -21,8 +21,8 @@ class FTTeamViewController: UIViewController {
     
     private let viewModel: FTTeamViewModel
     
-    init(teamId: Int) {
-        self.viewModel = FTTeamViewModel(teamId: teamId)
+    init(teamId: Int, dataProvider: FTDataProviderProtocol) {
+        self.viewModel = FTTeamViewModel(teamId: teamId, dataProvider: dataProvider)
         let className = String(describing: type(of: self))
         super.init(nibName: className, bundle: Bundle.main)
     }

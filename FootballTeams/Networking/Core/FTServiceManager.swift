@@ -10,7 +10,7 @@ import SystemConfiguration
 
 final class FTServiceManager {
     
-    static let baseUrl = FTConfiguration.baseUrl.rawValue
+    static let baseUrl = FTConfiguration.baseUrl
     
     // MARK: -  Request with Result
     public static func request<T: Codable, P: FTServiceProtocolWithResult>(model: T.Type, service: P, completion: @escaping (FTResponseWithResult<T>)->()) {
@@ -21,7 +21,7 @@ final class FTServiceManager {
         }
         if service.needAuth {
             var serviceWithAuthorization = service
-            serviceWithAuthorization.headers?["X-Auth-Token"] = FTConfiguration.apikey.rawValue
+            serviceWithAuthorization.headers?["X-Auth-Token"] = FTConfiguration.apikey
             self.requestHandler(model: model, service: serviceWithAuthorization, completion: completion)
         } else {
             self.requestHandler(model: model, service: service, completion: completion)

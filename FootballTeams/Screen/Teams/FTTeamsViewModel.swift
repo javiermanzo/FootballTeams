@@ -8,13 +8,18 @@
 import Foundation
 
 class FTTeamsViewModel {
+    let dataProvider: FTDataProviderProtocol
     var competition: FTCompetition?
     
+    init(dataProvider: FTDataProviderProtocol) {
+        self.dataProvider = dataProvider
+    }
+    
     func request(completion: @escaping (FTResponse) -> Void) {
-        FTCompetitionTeamsGetService().request { response in
+        self.dataProvider.requestCompetition(competitionCode: "CL") { [weak self] response in
             switch response {
             case .success(let competition):
-                self.competition = competition
+                self?.competition = competition
                 completion(.success)
             case .error(let error):
                 completion(.error(error))

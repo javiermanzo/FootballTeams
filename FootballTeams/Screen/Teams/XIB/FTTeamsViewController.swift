@@ -11,7 +11,7 @@ class FTTeamsViewController: UIViewController {
     
     @IBOutlet private weak var collectionView: UICollectionView!
     
-    private let viewModel = FTTeamsViewModel()
+    private let viewModel: FTTeamsViewModel
     private let spinner: UIActivityIndicatorView = {
         let activityIndicator = UIActivityIndicatorView(style: .large)
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
@@ -19,6 +19,16 @@ class FTTeamsViewController: UIViewController {
     }()
     
     private let refreshControl = UIRefreshControl()
+    
+    init(dataProvider: FTDataProviderProtocol) {
+        self.viewModel = FTTeamsViewModel(dataProvider: dataProvider)
+        let className = String(describing: type(of: self))
+        super.init(nibName: className, bundle: Bundle.main)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -118,12 +128,12 @@ extension FTTeamsViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let teams = self.viewModel.competition?.teams {
             let team = teams[indexPath.row]
-            let vc = FTTeamViewController(teamId: team.id)
+            let vc = FTTeamViewController(teamId: team.id, dataProvider: self.viewModel.dataProvider)
             
             let cell = collectionView.cellForItem(at: indexPath)
             
-            cell?.pulse(completion: { _ in
-                self.navigationController?.pushViewController(vc, animated: true)
+            cell?.pulse(completion: { [weak self] _ in
+                self?.navigationController?.pushViewController(vc, animated: true)
             })
         }
     }

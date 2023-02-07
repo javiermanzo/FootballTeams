@@ -21,6 +21,7 @@ class FTTeamCollectionViewCellCode: UICollectionViewCell {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
+        imageView.image = UIImage(systemName: "photo")
         return imageView
     }()
     
@@ -34,13 +35,21 @@ class FTTeamCollectionViewCellCode: UICollectionViewCell {
         return label
     }()
     
+    private var id: UUID
+    
     override init(frame: CGRect) {
+        self.id = UUID()
         super.init(frame: frame)
         self.setUpView()
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.id = UUID()
     }
     
     private func setUpView() {
@@ -70,13 +79,24 @@ class FTTeamCollectionViewCellCode: UICollectionViewCell {
     }
     
     func setUpValue(team: FTTeam) {
+        self.titleLabel.text = team.name
+        
+        let id = self.id
+        
         if let crest = team.crest,
            let url = URL(string: crest) {
-            self.logoImageView.setRemoteImage(url: url, placeHolder: UIImage(systemName: "photo"))
+            self.logoImageView.image = self.logoImageView.getMemoryCache(url: url) ?? UIImage(systemName: "photo")
+            
+            self.logoImageView.requestRemoteImage(url: url) { [weak self] image in
+                guard id == self?.id else { return }
+                DispatchQueue.main.async {
+                    if let image = image {
+                        self?.logoImageView.image = image
+                    }
+                }
+            }
         } else {
             self.logoImageView.image = UIImage(systemName: "photo")
         }
-        
-        self.titleLabel.text = team.name
     }
 }

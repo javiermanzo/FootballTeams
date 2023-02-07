@@ -22,7 +22,35 @@ extension UIImageView {
             options.append(.processor(processor))
         }
         
+        self.kf.cancelDownloadTask()
         self.kf.setImage(with:url, placeholder: placeHolder, options: options)
+    }
+    
+    func requestRemoteImage(url: URL, completion: @escaping (UIImage?) -> Void) {
+        var options: KingfisherOptionsInfo = []
+        
+        if url.pathExtension == "svg" {
+            let processor = SVGProcessor(size: self.bounds.size)
+            options.append(.processor(processor))
+        }
+        
+        let cache = ImageCache.default
+        options.append(.targetCache(cache))
+        
+        ImageDownloader.default.downloadImage(with: url, options: options) { result in
+            switch result {
+            case .success(let value):
+                cache.store(value.image, forKey: url.cacheKey)
+                completion(value.image)
+            case .failure:
+                completion(nil)
+            }
+        }
+    }
+    
+    func getMemoryCache(url: URL) -> UIImage?{
+        let cache = ImageCache.default
+        return cache.retrieveImageInMemoryCache(forKey: url.cacheKey)
     }
 }
 
@@ -36,11 +64,12 @@ fileprivate struct SVGProcessor: ImageProcessor {
     }
     
     func process(item: ImageProcessItem, options: KingfisherParsedOptionsInfo) -> UIImage? {
+        if self.size == .zero { return nil }
         switch item {
         case .image(let image):
             return image
         case .data(let data):
-            if let svgString = String(data: data, encoding: .utf8) {
+            if data.count > 0, let svgString = String(data: data, encoding: .utf8) {
                 let path = SVGBezierPath.paths(fromSVGString: svgString)
                 let layer = SVGLayer()
                 layer.paths = path

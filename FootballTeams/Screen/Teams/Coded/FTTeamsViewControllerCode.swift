@@ -26,7 +26,16 @@ class FTTeamsViewControllerCode: UIViewController {
     
     private let refreshControl = UIRefreshControl()
     
-    private let viewModel = FTTeamsViewModel()
+    private let viewModel: FTTeamsViewModel
+    
+    init(dataProvider: FTDataProviderProtocol) {
+        self.viewModel = FTTeamsViewModel(dataProvider: dataProvider)
+        super.init(nibName: nil, bundle: Bundle.main)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,8 +46,8 @@ class FTTeamsViewControllerCode: UIViewController {
     private func setUpViews() {
         self.view.backgroundColor = UIColor(color: .first)
         self.setUpNavigation()
-        self.setUpSpinner()
         self.setUpCollectionView()
+        self.setUpSpinner()
     }
     
     private func setUpCollectionView() {
@@ -134,7 +143,7 @@ extension FTTeamsViewControllerCode: UICollectionViewDataSource, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let teams = self.viewModel.competition?.teams {
             let team = teams[indexPath.row]
-            let vc = FTTeamViewControllerCode(teamId: team.id)
+            let vc = FTTeamViewControllerCode(teamId: team.id, dataProvider: self.viewModel.dataProvider)
             
             let cell = collectionView.cellForItem(at: indexPath)
             

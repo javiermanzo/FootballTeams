@@ -30,15 +30,14 @@ class FTTeamSectionHeaderViewCode: UITableViewHeaderFooterView {
     }
     
     private func setUpView() {
-        self.tintColor = UIColor(color: .third) ?? .clear
+        self.tintColor = UIColor(color: .first)?.withAlphaComponent(0.6) ?? .clear
         self.contentView.addSubview(self.titleLabel)
         
         NSLayoutConstraint.activate([
             self.titleLabel.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 16),
             self.titleLabel.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -16),
             self.titleLabel.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 8),
-            self.titleLabel.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: 8),
-            self.titleLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 20)
+            self.titleLabel.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -8)
         ])
     }
     

@@ -28,8 +28,8 @@ class FTTeamViewControllerCode: UIViewController {
     
     private let viewModel: FTTeamViewModel
     
-    init(teamId: Int) {
-        self.viewModel = FTTeamViewModel(teamId: teamId)
+    init(teamId: Int, dataProvider: FTDataProviderProtocol) {
+        self.viewModel = FTTeamViewModel(teamId: teamId, dataProvider: dataProvider)
         super.init(nibName: nil, bundle: Bundle.main)
     }
     
@@ -107,7 +107,6 @@ class FTTeamViewControllerCode: UIViewController {
             }
         }
     }
-    
 }
 
 extension FTTeamViewControllerCode: UITableViewDelegate, UITableViewDataSource {

@@ -11,9 +11,11 @@ class FTTeamViewModel {
     var team: FTTeam?
     let teamId: Int
     var tableSecionts = [FTTeamSeaction]()
+    let dataProvider: FTDataProviderProtocol
     
-    init(teamId: Int) {
+    init(teamId: Int, dataProvider: FTDataProviderProtocol) {
         self.teamId = teamId
+        self.dataProvider = dataProvider
     }
     
     func setUpSections() {
@@ -34,10 +36,10 @@ class FTTeamViewModel {
     }
     
     func request(completion: @escaping (FTResponse) -> Void) {
-        FTTeamGetService(teamId: self.teamId).request { response in
+        self.dataProvider.requestTeam(teamId: teamId) { [weak self] response in
             switch response {
             case .success(let team):
-                self.team = team
+                self?.team = team
                 completion(.success)
             case .error(let error):
                 completion(.error(error))
