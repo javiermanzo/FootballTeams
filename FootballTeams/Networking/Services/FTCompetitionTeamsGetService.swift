@@ -8,6 +8,7 @@
 import Foundation
 
 class FTCompetitionTeamsGetService: FTServiceProtocolWithResult {
+    
     typealias T = FTCompetition
     
     var url: String = "\(FTServiceManager.baseUrl)/competitions/{COMPETITION_CODE}/teams"
@@ -16,16 +17,20 @@ class FTCompetitionTeamsGetService: FTServiceProtocolWithResult {
     
     var headers: [String : String]?
     
-    var queryParams: [String : String]? = nil
+    var queryParameters: [String : String]? = nil
     
-    var pathParams: [String : String]? = nil
+    var pathParameters: [String : String]? = nil
     
     var body: [String : Any]? = nil
     
     var needAuth: Bool = true
     
+    var timeout: TimeInterval = 5
+    
+    var task: URLSessionTask?
+    
     init(competitionCode: String = "CL") {
-        self.pathParams = [
+        self.pathParameters = [
             "COMPETITION_CODE" : "\(competitionCode)"
         ]
         

@@ -99,10 +99,8 @@ class FTTeamViewController: UIViewController {
                     self?.tableView.reloadData()
                 }
             case .error(let error):
-                if let error = error {
-                    self.presentServiceError(error: error) { [weak self] in
-                        self?.requestData()
-                    }
+                self.presentServiceError(error: error) { [weak self] in
+                    self?.requestData()
                 }
             }
         }

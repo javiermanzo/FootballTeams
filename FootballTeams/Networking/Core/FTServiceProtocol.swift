@@ -7,18 +7,40 @@
 
 import Foundation
 
-public protocol FTServiceProtocolBase {
+public protocol FTServiceProtocolBase: AnyObject {
     var url: String { get set }
     var httpMethod: FTHttpMethod { get set }
     var headers: [String: String]? { get set }
-    var queryParams: [String: String]? { get set }
-    var pathParams: [String: String]? { get set }
+    var queryParameters: [String: String]? { get set }
+    var pathParameters: [String: String]? { get set }
     var body: [String: Any]? { get set }
     var needAuth: Bool { get }
+    var timeout: TimeInterval { get set }
+    var task: URLSessionTask? { get set }
     func dataBody() -> Data?
 }
 
 extension FTServiceProtocolBase {
+    public func isActive() -> Bool {
+        if let task = self.task {
+            if !task.progress.isPaused,
+               !task.progress.isFinished,
+               !task.progress.isCancelled {
+                return true
+            }
+        }
+        return false
+    }
+    
+    public func cancel() {
+        if let task = self.task {
+            DispatchQueue.main.async {
+                task.cancel()
+                self.task = nil
+            }
+        }
+    }
+    
     public func getDefaultHeaders() -> [String:String] {
         return FTServiceManager.getDefaultHeaders()
     }

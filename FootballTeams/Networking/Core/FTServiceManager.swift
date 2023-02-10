@@ -35,7 +35,11 @@ final class FTServiceManager {
             return
         }
         
-        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+        if let service = service as? FTDebugServiceProtocol {
+            service.printRequest(request: request)
+        }
+        
+        service.task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             guard let httpResponse = response as? HTTPURLResponse,
                   let data = data else {
                 completion(.error(.requestError(statusCode: 0)))
@@ -47,6 +51,9 @@ final class FTServiceManager {
                 return
             }
             
+            if let service = service as? FTDebugServiceProtocol {
+                service.printResponse(httpResponse: httpResponse, data: data)
+            }
             //Debugging
 //           let printData = String(data: data, encoding: .utf8)
 //           print("OVServicesManager::Response ======: ", printData)
@@ -62,19 +69,21 @@ final class FTServiceManager {
             } else {
                 completion(.error(.codableError))
             }
+            
+            service.task = nil
         }
         
-        task.resume()
+        service.task?.resume()
     }
     
     // MARK: -  Private Base Methods
     
     private static func buildRequest<P: FTServiceProtocolBase>(service: P) -> URLRequest? {
         
-        let urlbase = compositeURL(url: service.url, pathParams:  service.pathParams)
+        let urlbase = compositeURL(url: service.url, pathParams:  service.pathParameters)
         guard var urlComponents = URLComponents(string: urlbase) else { return nil }
         
-        if let parameters = service.queryParams, !parameters.isEmpty {
+        if let parameters = service.queryParameters, !parameters.isEmpty {
             var queryItems = [URLQueryItem]()
             for (key, value) in parameters {
                 queryItems.append(URLQueryItem(name: key, value: value))
@@ -93,6 +102,8 @@ final class FTServiceManager {
         }
         
         request.httpMethod = service.httpMethod.rawValue
+        
+        request.timeoutInterval = service.timeout
         
         if let body = service.dataBody() {
             request.httpBody = body

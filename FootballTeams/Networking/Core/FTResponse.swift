@@ -9,10 +9,10 @@ import Foundation
 
 public enum FTResponse {
     case success
-    case error(FTServiceError?)
+    case error(FTServiceError)
 }
 
 public enum FTResponseWithResult<T> {
     case success(T)
-    case error(FTServiceError?)
+    case error(FTServiceError)
 }

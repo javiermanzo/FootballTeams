@@ -8,6 +8,7 @@
 import Foundation
 
 class FTTeamGetService: FTServiceProtocolWithResult {
+    
     typealias T = FTTeam
     
     var url: String = "\(FTServiceManager.baseUrl)/teams/{TEAM_ID}/"
@@ -16,16 +17,20 @@ class FTTeamGetService: FTServiceProtocolWithResult {
     
     var headers: [String : String]?
     
-    var queryParams: [String : String]? = nil
+    var queryParameters: [String : String]? = nil
     
-    var pathParams: [String : String]? = nil
+    var pathParameters: [String : String]? = nil
     
     var body: [String : Any]? = nil
     
     var needAuth: Bool = true
     
+    var timeout: TimeInterval = 5
+    
+    var task: URLSessionTask?
+    
     init(teamId: Int) {
-        self.pathParams = [
+        self.pathParameters = [
             "TEAM_ID" : "\(teamId)"
         ]
         

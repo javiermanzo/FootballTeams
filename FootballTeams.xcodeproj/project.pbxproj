@@ -48,6 +48,7 @@
 		3BAF28D329914D330051D19E /* FTDataProviderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF28D229914D330051D19E /* FTDataProviderManager.swift */; };
 		3BDCB90B2991F1A3007B856A /* FTTeamsUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDCB90A2991F1A3007B856A /* FTTeamsUnitTests.swift */; };
 		3BDCB9122991F8DA007B856A /* FTTeamUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDCB9112991F8DA007B856A /* FTTeamUnitTests.swift */; };
+		3BDCB91429958E1D007B856A /* FTDebugServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDCB91329958E1D007B856A /* FTDebugServiceProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		3BDCB9082991F1A3007B856A /* FootballTeamsUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FootballTeamsUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BDCB90A2991F1A3007B856A /* FTTeamsUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTTeamsUnitTests.swift; sourceTree = "<group>"; };
 		3BDCB9112991F8DA007B856A /* FTTeamUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTTeamUnitTests.swift; sourceTree = "<group>"; };
+		3BDCB91329958E1D007B856A /* FTDebugServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTDebugServiceProtocol.swift; sourceTree = "<group>"; };
 		6444868D80503D7A391603FC /* Pods-FootballTeams.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootballTeams.release.xcconfig"; path = "Target Support Files/Pods-FootballTeams/Pods-FootballTeams.release.xcconfig"; sourceTree = "<group>"; };
 		896BDD1DECD8FD60FD86CFFF /* Pods_FootballTeams.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FootballTeams.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -218,8 +220,8 @@
 		3B5D7F362978B97500C67EB8 /* Teams */ = {
 			isa = PBXGroup;
 			children = (
-				3B5D7F592978D07300C67EB8 /* FTTeamsViewModel.swift */,
 				3B9A9C98298EC13800046380 /* Views */,
+				3B5D7F592978D07300C67EB8 /* FTTeamsViewModel.swift */,
 			);
 			path = Teams;
 			sourceTree = "<group>";
@@ -249,6 +251,7 @@
 				3B5D7F422978BC7200C67EB8 /* FTServiceError.swift */,
 				3B5D7F442978BCE200C67EB8 /* FTResponse.swift */,
 				3B5D7F462978BD0F00C67EB8 /* FTServiceProtocol.swift */,
+				3BDCB91329958E1D007B856A /* FTDebugServiceProtocol.swift */,
 				3B5D7F482978BD6C00C67EB8 /* FTServiceManager.swift */,
 			);
 			path = Core;
@@ -513,6 +516,7 @@
 				3B5D7F472978BD0F00C67EB8 /* FTServiceProtocol.swift in Sources */,
 				3B5D7F452978BCE300C67EB8 /* FTResponse.swift in Sources */,
 				3BAF28CD299140540051D19E /* FTDataProviderProtocol.swift in Sources */,
+				3BDCB91429958E1D007B856A /* FTDebugServiceProtocol.swift in Sources */,
 				3BAF28D329914D330051D19E /* FTDataProviderManager.swift in Sources */,
 				3BAF28CF299144550051D19E /* FTServiceDataProvider.swift in Sources */,
 				3BAF28BF298EC2A10051D19E /* FTTeamViewController.swift in Sources */,
