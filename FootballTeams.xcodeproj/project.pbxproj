@@ -49,6 +49,8 @@
 		3BDCB90B2991F1A3007B856A /* FTTeamsUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDCB90A2991F1A3007B856A /* FTTeamsUnitTests.swift */; };
 		3BDCB9122991F8DA007B856A /* FTTeamUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDCB9112991F8DA007B856A /* FTTeamUnitTests.swift */; };
 		3BDCB91429958E1D007B856A /* FTDebugServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDCB91329958E1D007B856A /* FTDebugServiceProtocol.swift */; };
+		3BDCB916299A86E4007B856A /* FTAuthProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDCB915299A86E4007B856A /* FTAuthProviderProtocol.swift */; };
+		3BDCB918299A8AF4007B856A /* FTServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDCB917299A8AF4007B856A /* FTServiceProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +109,8 @@
 		3BDCB90A2991F1A3007B856A /* FTTeamsUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTTeamsUnitTests.swift; sourceTree = "<group>"; };
 		3BDCB9112991F8DA007B856A /* FTTeamUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTTeamUnitTests.swift; sourceTree = "<group>"; };
 		3BDCB91329958E1D007B856A /* FTDebugServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTDebugServiceProtocol.swift; sourceTree = "<group>"; };
+		3BDCB915299A86E4007B856A /* FTAuthProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTAuthProviderProtocol.swift; sourceTree = "<group>"; };
+		3BDCB917299A8AF4007B856A /* FTServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTServiceProvider.swift; sourceTree = "<group>"; };
 		6444868D80503D7A391603FC /* Pods-FootballTeams.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootballTeams.release.xcconfig"; path = "Target Support Files/Pods-FootballTeams/Pods-FootballTeams.release.xcconfig"; sourceTree = "<group>"; };
 		896BDD1DECD8FD60FD86CFFF /* Pods_FootballTeams.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FootballTeams.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -191,6 +195,7 @@
 			children = (
 				3B5D7F3F2978BBF600C67EB8 /* Core */,
 				3B5D7F3E2978BBEE00C67EB8 /* Services */,
+				3BDCB917299A8AF4007B856A /* FTServiceProvider.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -253,6 +258,7 @@
 				3B5D7F462978BD0F00C67EB8 /* FTServiceProtocol.swift */,
 				3BDCB91329958E1D007B856A /* FTDebugServiceProtocol.swift */,
 				3B5D7F482978BD6C00C67EB8 /* FTServiceManager.swift */,
+				3BDCB915299A86E4007B856A /* FTAuthProviderProtocol.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -514,7 +520,9 @@
 				3BAF28C9298EDF590051D19E /* FTCompetitionCollectionViewCell.swift in Sources */,
 				3B5D7F4D2978C09500C67EB8 /* FTTeam.swift in Sources */,
 				3B5D7F472978BD0F00C67EB8 /* FTServiceProtocol.swift in Sources */,
+				3BDCB916299A86E4007B856A /* FTAuthProviderProtocol.swift in Sources */,
 				3B5D7F452978BCE300C67EB8 /* FTResponse.swift in Sources */,
+				3BDCB918299A8AF4007B856A /* FTServiceProvider.swift in Sources */,
 				3BAF28CD299140540051D19E /* FTDataProviderProtocol.swift in Sources */,
 				3BDCB91429958E1D007B856A /* FTDebugServiceProtocol.swift in Sources */,
 				3BAF28D329914D330051D19E /* FTDataProviderManager.swift in Sources */,

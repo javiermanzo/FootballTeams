@@ -18,6 +18,7 @@ public enum FTServiceError: Error {
     case decryptError
     case authorizationError(message: String?)
     case apiError(statusCode: Int, error: FTServiceApiError)
+    case authProviderNeeded
 }
 
 public struct FTServiceApiError: Codable {

@@ -10,7 +10,7 @@ import SystemConfiguration
 
 final class FTServiceManager {
     
-    static let baseUrl = FTConfiguration.baseUrl
+    static var authProvider: FTAuthProviderProtocol?
     
     // MARK: -  Request with Result
     public static func request<T: Codable, P: FTServiceProtocolWithResult>(model: T.Type, service: P, completion: @escaping (FTResponseWithResult<T>)->()) {
@@ -20,9 +20,16 @@ final class FTServiceManager {
             return
         }
         if service.needAuth {
-            var serviceWithAuthorization = service
-            serviceWithAuthorization.headers?["X-Auth-Token"] = FTConfiguration.apikey
-            self.requestHandler(model: model, service: serviceWithAuthorization, completion: completion)
+            if let authProvider = self.authProvider {
+                if service.headers == nil {
+                    service.headers = [String: String]()
+                }
+                
+                service.headers?.merge(authProvider.getCredentialsHeader(), uniquingKeysWith: { (_, new) in new })
+                self.requestHandler(model: model, service: service, completion: completion)
+            } else {
+                completion(.error(FTServiceError.authProviderNeeded))
+            }
         } else {
             self.requestHandler(model: model, service: service, completion: completion)
         }
@@ -55,8 +62,8 @@ final class FTServiceManager {
                 service.printResponse(httpResponse: httpResponse, data: data)
             }
             //Debugging
-//           let printData = String(data: data, encoding: .utf8)
-//           print("OVServicesManager::Response ======: ", printData)
+            //           let printData = String(data: data, encoding: .utf8)
+            //           print("OVServicesManager::Response ======: ", printData)
             
             if !(200..<300).contains(httpResponse.statusCode) {
                 if let error = FTServiceApiError.parse(data: data) {
@@ -77,21 +84,8 @@ final class FTServiceManager {
     }
     
     // MARK: -  Private Base Methods
-    
     private static func buildRequest<P: FTServiceProtocolBase>(service: P) -> URLRequest? {
-        
-        let urlbase = compositeURL(url: service.url, pathParams:  service.pathParameters)
-        guard var urlComponents = URLComponents(string: urlbase) else { return nil }
-        
-        if let parameters = service.queryParameters, !parameters.isEmpty {
-            var queryItems = [URLQueryItem]()
-            for (key, value) in parameters {
-                queryItems.append(URLQueryItem(name: key, value: value))
-            }
-            urlComponents.queryItems = queryItems
-        }
-        
-        guard let url = urlComponents.url else { return nil }
+        guard let url = compositeURL(url: service.url, pathParams: service.pathParameters, queryParams:  service.queryParameters) else { return nil }
         
         var request = URLRequest(url: url)
         
@@ -113,15 +107,31 @@ final class FTServiceManager {
         return request
     }
     
-    private static func compositeURL(url:String, pathParams:[String: String]?) -> String {
-        var compositeURL = url
-        guard let pathParams = pathParams else {
-            return compositeURL
+    private static func compositeURL(url: String, pathParams: [String: String]?, queryParams: [String: String]?) -> URL? {
+        var composite = url
+        
+        if let pp = pathParams {
+            for (key, value) in pp {
+                composite = url.replacingOccurrences(of: "{\(key)}", with: value)
+            }
         }
-        for (key, value) in pathParams {
-            compositeURL = compositeURL.replacingOccurrences(of: "{\(key)}", with: value)
+        
+        var url: URL? = URL(string: composite)
+        
+        if var urlComponents = URLComponents(string: composite) {
+            if let qp = queryParams, !qp.isEmpty {
+                var queryItems = [URLQueryItem]()
+                for (key, value) in qp {
+                    queryItems.append(URLQueryItem(name: key, value: value))
+                }
+                urlComponents.queryItems = queryItems.sorted(by: { q1, q2 in
+                    return q1.name < q2.name
+                })
+                url = urlComponents.url
+            }
         }
-        return compositeURL
+        
+        return url
     }
     
     private static func isConnectedToNetwork() -> Bool {

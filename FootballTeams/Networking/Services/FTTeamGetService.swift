@@ -11,7 +11,7 @@ class FTTeamGetService: FTServiceProtocolWithResult {
     
     typealias T = FTTeam
     
-    var url: String = "\(FTServiceManager.baseUrl)/teams/{TEAM_ID}/"
+    var url: String = "\(FTConfiguration.baseUrl)/teams/{TEAM_ID}/"
     
     var httpMethod: FTHttpMethod = .get
     
