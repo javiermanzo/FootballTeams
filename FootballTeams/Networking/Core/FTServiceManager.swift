@@ -38,7 +38,7 @@ final class FTServiceManager {
     private static func requestHandler<T: Codable, P: FTServiceProtocolWithResult>(model: T.Type, service: P, completion: @escaping (FTResponseWithResult<T>)->()) {
         
         guard let request = self.buildRequest(service: service) else {
-            completion(.error(FTServiceError.defaultError))
+            completion(.error(FTServiceError.malformedRequestError))
             return
         }
         
@@ -47,34 +47,36 @@ final class FTServiceManager {
         }
         
         service.task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-            guard let httpResponse = response as? HTTPURLResponse,
-                  let data = data else {
-                completion(.error(.requestError(statusCode: 0)))
+            if let error = error as? URLError {
+                if error.code == .cancelled {
+                    completion(.cancelled)
+                    return
+                } else if error.code == .cancelled{
+                    completion(.error(.timeoutError))
+                    return
+                }
+            }
+            
+            guard let httpResponse = response as? HTTPURLResponse else {
+                completion(.error(.badRequestError))
                 return
             }
             
-            if error != nil {
-                completion(.error(.requestError(statusCode: httpResponse.statusCode)))
+            guard let data = data, error == nil else {
+                completion(.error(.requestError(statusCode: httpResponse.statusCode, response: httpResponse, error: error)))
                 return
             }
             
             if let service = service as? FTDebugServiceProtocol {
                 service.printResponse(httpResponse: httpResponse, data: data)
             }
-            //Debugging
-            //           let printData = String(data: data, encoding: .utf8)
-            //           print("OVServicesManager::Response ======: ", printData)
             
             if !(200..<300).contains(httpResponse.statusCode) {
-                if let error = FTServiceApiError.parse(data: data) {
-                    completion(.error(.apiError(statusCode: httpResponse.statusCode, error: error)))
-                } else {
-                    completion(.error(.requestError(statusCode: httpResponse.statusCode)))
-                }
+                completion(.error(.apiError(statusCode: httpResponse.statusCode, errorData: data)))
             } else if let parsedResponse = service.parseData(data: data, model: model) {
                 completion(.success(parsedResponse))
             } else {
-                completion(.error(.codableError))
+                completion(.error(.requestError(statusCode: httpResponse.statusCode, response: httpResponse, error: error)))
             }
             
             service.task = nil

@@ -18,8 +18,10 @@ extension UIViewController {
         var message = ""
         
         switch error {
-        case .apiError(_, let apiError):
-            message = apiError.message
+        case .apiError(_, let data):
+            if let error = FTServiceApiError(data: data) {
+                message = error.message
+            }
         default:
             message = "Something happened"
         }

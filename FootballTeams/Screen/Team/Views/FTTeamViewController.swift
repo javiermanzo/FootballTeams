@@ -98,6 +98,8 @@ class FTTeamViewController: UIViewController {
                     self?.viewModel.setUpSections()
                     self?.tableView.reloadData()
                 }
+            case .cancelled:
+                break
             case .error(let error):
                 self.presentServiceError(error: error) { [weak self] in
                     self?.requestData()

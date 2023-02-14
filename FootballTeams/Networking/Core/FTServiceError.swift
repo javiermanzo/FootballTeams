@@ -8,34 +8,14 @@
 import Foundation
 
 public enum FTServiceError: Error {
-    case codableError
-    case defaultError
-    case serviceError(message: String?)
-    case requestError(statusCode: Int)
-    case timeoutError
-    case noConectionError
-    case signInError
-    case decryptError
-    case authorizationError(message: String?)
-    case apiError(statusCode: Int, error: FTServiceApiError)
+    case apiError(statusCode: Int, errorData: Data)
     case authProviderNeeded
+    case badRequestError
+    case codableError
+    case malformedRequestError
+    case noConectionError
+    case requestError(statusCode: Int, response: HTTPURLResponse, error: Error?)
+    case timeoutError
 }
 
-public struct FTServiceApiError: Codable {
-    let errorCode: FTServiceApiErrorCode
-    let message: String
-    
-    static func parse(data: Data) -> FTServiceApiError? {
-        let decoder = JSONDecoder()
-        return try? decoder.decode(FTServiceApiError.self, from: data)
-    }
-}
 
-enum FTServiceApiErrorCode: Int, Codable {
-    case rateLimit = 429
-    case unknown = 0
-    
-    public init(from decoder: Decoder) throws {
-        self = try FTServiceApiErrorCode(rawValue: decoder.singleValueContainer().decode(RawValue.self)) ?? .unknown
-    }
-}

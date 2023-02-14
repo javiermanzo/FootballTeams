@@ -109,6 +109,8 @@ class FTTeamsViewController: UIViewController {
                 DispatchQueue.main.async { [weak self] in
                     self?.collectionView.reloadData()
                 }
+            case .cancelled:
+               break
             case .error(let error):
                 self.presentServiceError(error: error) { [weak self] in
                     self?.requestData()

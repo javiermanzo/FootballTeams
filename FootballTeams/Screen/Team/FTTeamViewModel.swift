@@ -41,6 +41,8 @@ class FTTeamViewModel {
             case .success(let team):
                 self?.team = team
                 completion(.success)
+            case .cancelled:
+                completion(.cancelled)
             case .error(let error):
                 completion(.error(error))
             }
