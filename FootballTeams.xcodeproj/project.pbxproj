@@ -13,11 +13,6 @@
 		3B5D7F272978B8F800C67EB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B5D7F262978B8F800C67EB8 /* Assets.xcassets */; };
 		3B5D7F2A2978B8F800C67EB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B5D7F282978B8F800C67EB8 /* LaunchScreen.storyboard */; };
 		3B5D7F3D2978BAC900C67EB8 /* FTConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F3C2978BAC900C67EB8 /* FTConfiguration.swift */; };
-		3B5D7F412978BC4C00C67EB8 /* FTHttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F402978BC4C00C67EB8 /* FTHttpMethod.swift */; };
-		3B5D7F432978BC7200C67EB8 /* FTServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F422978BC7200C67EB8 /* FTServiceError.swift */; };
-		3B5D7F452978BCE300C67EB8 /* FTResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F442978BCE200C67EB8 /* FTResponse.swift */; };
-		3B5D7F472978BD0F00C67EB8 /* FTServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F462978BD0F00C67EB8 /* FTServiceProtocol.swift */; };
-		3B5D7F492978BD6C00C67EB8 /* FTServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F482978BD6C00C67EB8 /* FTServiceManager.swift */; };
 		3B5D7F4D2978C09500C67EB8 /* FTTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F4C2978C09500C67EB8 /* FTTeam.swift */; };
 		3B5D7F512978C18D00C67EB8 /* FTTeamGetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F502978C18D00C67EB8 /* FTTeamGetService.swift */; };
 		3B5D7F532978C5E100C67EB8 /* UIViewController-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D7F522978C5E100C67EB8 /* UIViewController-extension.swift */; };
@@ -48,8 +43,6 @@
 		3BAF28D329914D330051D19E /* FTDataProviderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF28D229914D330051D19E /* FTDataProviderManager.swift */; };
 		3BDCB90B2991F1A3007B856A /* FTTeamsUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDCB90A2991F1A3007B856A /* FTTeamsUnitTests.swift */; };
 		3BDCB9122991F8DA007B856A /* FTTeamUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDCB9112991F8DA007B856A /* FTTeamUnitTests.swift */; };
-		3BDCB91429958E1D007B856A /* FTDebugServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDCB91329958E1D007B856A /* FTDebugServiceProtocol.swift */; };
-		3BDCB916299A86E4007B856A /* FTAuthProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDCB915299A86E4007B856A /* FTAuthProviderProtocol.swift */; };
 		3BDCB918299A8AF4007B856A /* FTServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDCB917299A8AF4007B856A /* FTServiceProvider.swift */; };
 /* End PBXBuildFile section */
 
@@ -72,11 +65,6 @@
 		3B5D7F292978B8F800C67EB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B5D7F2B2978B8F800C67EB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B5D7F3C2978BAC900C67EB8 /* FTConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTConfiguration.swift; sourceTree = "<group>"; };
-		3B5D7F402978BC4C00C67EB8 /* FTHttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTHttpMethod.swift; sourceTree = "<group>"; };
-		3B5D7F422978BC7200C67EB8 /* FTServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTServiceError.swift; sourceTree = "<group>"; };
-		3B5D7F442978BCE200C67EB8 /* FTResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTResponse.swift; sourceTree = "<group>"; };
-		3B5D7F462978BD0F00C67EB8 /* FTServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTServiceProtocol.swift; sourceTree = "<group>"; };
-		3B5D7F482978BD6C00C67EB8 /* FTServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTServiceManager.swift; sourceTree = "<group>"; };
 		3B5D7F4C2978C09500C67EB8 /* FTTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTTeam.swift; sourceTree = "<group>"; };
 		3B5D7F502978C18D00C67EB8 /* FTTeamGetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTTeamGetService.swift; sourceTree = "<group>"; };
 		3B5D7F522978C5E100C67EB8 /* UIViewController-extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController-extension.swift"; sourceTree = "<group>"; };
@@ -108,8 +96,6 @@
 		3BDCB9082991F1A3007B856A /* FootballTeamsUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FootballTeamsUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BDCB90A2991F1A3007B856A /* FTTeamsUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTTeamsUnitTests.swift; sourceTree = "<group>"; };
 		3BDCB9112991F8DA007B856A /* FTTeamUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTTeamUnitTests.swift; sourceTree = "<group>"; };
-		3BDCB91329958E1D007B856A /* FTDebugServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTDebugServiceProtocol.swift; sourceTree = "<group>"; };
-		3BDCB915299A86E4007B856A /* FTAuthProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTAuthProviderProtocol.swift; sourceTree = "<group>"; };
 		3BDCB917299A8AF4007B856A /* FTServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTServiceProvider.swift; sourceTree = "<group>"; };
 		6444868D80503D7A391603FC /* Pods-FootballTeams.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootballTeams.release.xcconfig"; path = "Target Support Files/Pods-FootballTeams/Pods-FootballTeams.release.xcconfig"; sourceTree = "<group>"; };
 		896BDD1DECD8FD60FD86CFFF /* Pods_FootballTeams.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FootballTeams.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -193,7 +179,6 @@
 		3B5D7F332978B94A00C67EB8 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				3B5D7F3F2978BBF600C67EB8 /* Core */,
 				3B5D7F3E2978BBEE00C67EB8 /* Services */,
 				3BDCB917299A8AF4007B856A /* FTServiceProvider.swift */,
 			);
@@ -247,20 +232,6 @@
 				3B5D7F612979766100C67EB8 /* FTCompetitionTeamsGetService.swift */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		3B5D7F3F2978BBF600C67EB8 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				3B5D7F402978BC4C00C67EB8 /* FTHttpMethod.swift */,
-				3B5D7F422978BC7200C67EB8 /* FTServiceError.swift */,
-				3B5D7F442978BCE200C67EB8 /* FTResponse.swift */,
-				3B5D7F462978BD0F00C67EB8 /* FTServiceProtocol.swift */,
-				3BDCB91329958E1D007B856A /* FTDebugServiceProtocol.swift */,
-				3B5D7F482978BD6C00C67EB8 /* FTServiceManager.swift */,
-				3BDCB915299A86E4007B856A /* FTAuthProviderProtocol.swift */,
-			);
-			path = Core;
 			sourceTree = "<group>";
 		};
 		3B5D7F6329797D4A00C67EB8 /* Team */ = {
@@ -502,7 +473,6 @@
 				3B5D7F622979766100C67EB8 /* FTCompetitionTeamsGetService.swift in Sources */,
 				3BAF28C1298EC5AE0051D19E /* FTTeamSectionHeaderView.swift in Sources */,
 				3BAF28C7298EDD210051D19E /* FTCompetitionsTableViewCell.swift in Sources */,
-				3B5D7F492978BD6C00C67EB8 /* FTServiceManager.swift in Sources */,
 				3B5D7F512978C18D00C67EB8 /* FTTeamGetService.swift in Sources */,
 				3B5D7F1E2978B8F700C67EB8 /* AppDelegate.swift in Sources */,
 				3B5D7F8C29799EFA00C67EB8 /* UIImageView-extensions.swift in Sources */,
@@ -510,7 +480,6 @@
 				3B5D7F5C2978D30A00C67EB8 /* UICollectionView-extension.swift in Sources */,
 				3B9A9C92298D48EB00046380 /* FTTeamsViewController.swift in Sources */,
 				3B5D7F932979D97D00C67EB8 /* UIColor-extension.swift in Sources */,
-				3B5D7F412978BC4C00C67EB8 /* FTHttpMethod.swift in Sources */,
 				3BAF28C3298EDA880051D19E /* FTCoachTableViewCell.swift in Sources */,
 				3B5D7F602979753A00C67EB8 /* FTCompetition.swift in Sources */,
 				3B5D7F532978C5E100C67EB8 /* UIViewController-extension.swift in Sources */,
@@ -519,18 +488,13 @@
 				3B5D7F3D2978BAC900C67EB8 /* FTConfiguration.swift in Sources */,
 				3BAF28C9298EDF590051D19E /* FTCompetitionCollectionViewCell.swift in Sources */,
 				3B5D7F4D2978C09500C67EB8 /* FTTeam.swift in Sources */,
-				3B5D7F472978BD0F00C67EB8 /* FTServiceProtocol.swift in Sources */,
-				3BDCB916299A86E4007B856A /* FTAuthProviderProtocol.swift in Sources */,
-				3B5D7F452978BCE300C67EB8 /* FTResponse.swift in Sources */,
 				3BDCB918299A8AF4007B856A /* FTServiceProvider.swift in Sources */,
 				3BAF28CD299140540051D19E /* FTDataProviderProtocol.swift in Sources */,
-				3BDCB91429958E1D007B856A /* FTDebugServiceProtocol.swift in Sources */,
 				3BAF28D329914D330051D19E /* FTDataProviderManager.swift in Sources */,
 				3BAF28CF299144550051D19E /* FTServiceDataProvider.swift in Sources */,
 				3BAF28BF298EC2A10051D19E /* FTTeamViewController.swift in Sources */,
 				3B5D7F6929797FFF00C67EB8 /* FTTeamViewModel.swift in Sources */,
 				3B5D7F722979877000C67EB8 /* FTIdentifierProtocol.swift in Sources */,
-				3B5D7F432978BC7200C67EB8 /* FTServiceError.swift in Sources */,
 				3B5D7F202978B8F700C67EB8 /* SceneDelegate.swift in Sources */,
 				3BAF28C5298EDC820051D19E /* FTPlayerTableViewCell.swift in Sources */,
 			);

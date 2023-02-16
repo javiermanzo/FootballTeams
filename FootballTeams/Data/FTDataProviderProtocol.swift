@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import Harbor
 
 protocol FTDataProviderProtocol {
-    func requestCompetition(competitionCode: String, completion: @escaping (FTResponseWithResult<FTCompetition>)->())
-    func requestTeam(teamId: Int, completion: @escaping (FTResponseWithResult<FTTeam>)->())
+    func requestCompetition(competitionCode: String, completion: @escaping (HResponseWithResult<FTCompetition>)->())
+    func requestTeam(teamId: Int, completion: @escaping (HResponseWithResult<FTTeam>)->())
 }

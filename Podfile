@@ -15,6 +15,7 @@ end
 def shared_pods
   pod 'Kingfisher', '7.5.0'
   pod 'PocketSVG',  '2.7.2'
+  pod 'Harbor',  '0.1.1'
 end
 
 target 'FootballTeams' do

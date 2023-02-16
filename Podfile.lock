@@ -1,20 +1,24 @@
 PODS:
+  - Harbor (0.1.1)
   - Kingfisher (7.5.0)
   - PocketSVG (2.7.2)
 
 DEPENDENCIES:
+  - Harbor (= 0.1.1)
   - Kingfisher (= 7.5.0)
   - PocketSVG (= 2.7.2)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - Harbor
     - Kingfisher
     - PocketSVG
 
 SPEC CHECKSUMS:
+  Harbor: 9c5fb39392b783b54d43c6ab2971eca23a809487
   Kingfisher: b9c2a4a4af2990a768445c277359b27bde287d71
   PocketSVG: c597e6916641fd2674d2f0cabca0d1869cb82880
 
-PODFILE CHECKSUM: cf54cb3f25a6f526d6990f40138fc9a76666f815
+PODFILE CHECKSUM: 3638ea5bf2be0a4c4930db32576db95564035755
 
 COCOAPODS: 1.11.3

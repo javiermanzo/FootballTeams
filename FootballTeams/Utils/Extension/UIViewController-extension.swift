@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Harbor
 
 extension UIViewController {
     static public func instanceWithDefaultNib() -> Self {
@@ -13,7 +14,7 @@ extension UIViewController {
         return self.init(nibName: className, bundle: Bundle.main)
     }
     
-    func presentServiceError(error: FTServiceError, retry: @escaping () -> Void) {
+    func presentServiceError(error: HServiceError, retry: @escaping () -> Void) {
         let title = "Error"
         var message = ""
         

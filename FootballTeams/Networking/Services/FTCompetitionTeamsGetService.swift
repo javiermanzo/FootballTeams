@@ -6,14 +6,15 @@
 //
 
 import Foundation
+import Harbor
 
-class FTCompetitionTeamsGetService: FTServiceProtocolWithResult {
+class FTCompetitionTeamsGetService: HServiceProtocolWithResult {
     
     typealias T = FTCompetition
     
     var url: String = "\(FTConfiguration.baseUrl)/competitions/{COMPETITION_CODE}/teams"
     
-    var httpMethod: FTHttpMethod = .get
+    var httpMethod: HHttpMethod = .get
     
     var headers: [String : String]?
     
@@ -27,13 +28,11 @@ class FTCompetitionTeamsGetService: FTServiceProtocolWithResult {
     
     var timeout: TimeInterval = 5
     
-    var task: URLSessionTask?
-    
     init(competitionCode: String = "CL") {
         self.pathParameters = [
             "COMPETITION_CODE" : "\(competitionCode)"
         ]
         
-        self.headers = FTServiceManager.getDefaultHeaders()
+        self.headers = FTServiceProvider.getDefaultHeaders()
     }
 }

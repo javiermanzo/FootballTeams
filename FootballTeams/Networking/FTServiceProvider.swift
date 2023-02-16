@@ -6,16 +6,25 @@
 //
 
 import Foundation
+import Harbor
 
-class FTServiceProvider: FTAuthProviderProtocol {
+class FTServiceProvider: HAuthProviderProtocol {
     
     init() {
-        FTServiceManager.authProvider = self
+        Harbor.setAuthProvider(self)
     }
     
-    func getCredentialsHeader() -> [String : String] {
+    func getCredentialsHeader() async -> [String : String] {
         let header = ["X-Auth-Token": FTConfiguration.apikey]
         return header
+    }
+    
+    static func getDefaultHeaders() -> [String:String] {
+        let headers = [
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        ]
+        return headers
     }
 }
 

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Harbor
 
 class FTTeamsViewModel {
     let dataProvider: FTDataProviderProtocol
@@ -15,7 +16,7 @@ class FTTeamsViewModel {
         self.dataProvider = dataProvider
     }
     
-    func request(completion: @escaping (FTResponse) -> Void) {
+    func request(completion: @escaping (HResponse) -> Void) {
         self.dataProvider.requestCompetition(competitionCode: "CL") { [weak self] response in
             switch response {
             case .success(let competition):

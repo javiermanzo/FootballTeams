@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Harbor
 
 class FTTeamViewModel {
     var team: FTTeam?
@@ -35,7 +36,7 @@ class FTTeamViewModel {
         }
     }
     
-    func request(completion: @escaping (FTResponse) -> Void) {
+    func request(completion: @escaping (HResponse) -> Void) {
         self.dataProvider.requestTeam(teamId: teamId) { [weak self] response in
             switch response {
             case .success(let team):

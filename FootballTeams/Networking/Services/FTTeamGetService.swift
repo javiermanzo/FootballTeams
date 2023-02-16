@@ -6,14 +6,15 @@
 //
 
 import Foundation
+import Harbor
 
-class FTTeamGetService: FTServiceProtocolWithResult {
+class FTTeamGetService: HServiceProtocolWithResult {
     
     typealias T = FTTeam
     
     var url: String = "\(FTConfiguration.baseUrl)/teams/{TEAM_ID}/"
     
-    var httpMethod: FTHttpMethod = .get
+    var httpMethod: HHttpMethod = .get
     
     var headers: [String : String]?
     
@@ -27,13 +28,11 @@ class FTTeamGetService: FTServiceProtocolWithResult {
     
     var timeout: TimeInterval = 5
     
-    var task: URLSessionTask?
-    
     init(teamId: Int) {
         self.pathParameters = [
             "TEAM_ID" : "\(teamId)"
         ]
         
-        self.headers = FTServiceManager.getDefaultHeaders()
+        self.headers = FTServiceProvider.getDefaultHeaders()
     }
 }
